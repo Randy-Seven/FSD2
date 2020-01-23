@@ -1,0 +1,14 @@
+extends ../assets/pug/layout/main.pug
+
+block content
+	include ../blocks/logo/logo.pug
+	.colors-and-types
+		.container
+			.colors-and-types__inner
+				include ../blocks/colors/colors.pug
+				include ../blocks/types/types.pug
+	.cards
+		.container
+			.cards__inner
+				include ../blocks/cards/room-search-form/room-search-form.pug
+				include ../blocks/cards/room-search-data/room-search-data.pug

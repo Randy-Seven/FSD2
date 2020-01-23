@@ -1,0 +1,74 @@
+/* COLORS 
+==========================*/ 
+
+.colors-and-types {
+    padding-top: 1.95rem;
+  }
+  
+  .colors-and-types__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .colors {
+    min-width: 269.26px;
+  }
+  
+  .colors__rectangles {
+    float: left;
+    width: 70px;
+  }
+  
+  .colors__rectangle{
+    width: 70px;
+    height: 70px;
+    border-radius: 6px;
+    margin-bottom: 1.05rem;
+  }
+  
+  .colors__rectangle_1 {
+    background: #1F2041;
+  }
+  
+  .colors__rectangle_2 {
+    background: rgba(31, 32, 65, 0.75);
+  }
+  
+  .colors__rectangle_3 {
+    background: rgba(31, 32, 65, 0.5);
+  }
+  
+  .colors__rectangle_4 {
+    background: rgba(31, 32, 65, 0.25);
+  }
+  
+  .colors__rectangle_5 {
+    background: rgba(31, 32, 65, 0.05);
+  }
+  
+  .colors__rectangle_6 {
+    background: #BC9CFF;
+  }
+  
+  .colors__rectangle_7 {
+    background: #6FCF97;
+  }
+  
+  .colors__descriptions {
+    float: right;
+    width: 159px;
+    height: 610px;
+  }
+  
+  .colors__description span {
+    font-weight: 700;
+  }
+  
+  .colors__description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 159px;
+    height: 70px;
+    margin-bottom: 1.05rem;
+  }

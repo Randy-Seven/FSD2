@@ -1,0 +1,82 @@
+/* UTILS 
+===============================*/
+
+@import "assets/scss/libs";
+@import "assets/scss/vars";
+@import "assets/scss/mixins";
+@import "assets/scss/fonts";
+@import "assets/scss/reset";
+
+/* BASE SETTINGS 
+===============================*/
+
+a {
+  text-decoration: none;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+
+.container {
+  width: 100%;
+  max-width: 1160px;
+  margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+} 
+
+html {
+  font-size: 19px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+  color: #1F2041;
+  font-family: 'Quicksand', sans-serif;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+.clearfix::after {
+  content:"";
+  display: table;
+  clear: both;
+}
+
+/* BLOCKS 
+===============================*/
+
+@import "blocks/logo/logo";
+@import "blocks/colors/colors";
+@import "blocks/types/types";
+@import "blocks/cards/cards";
+@import "blocks/cards/room-search-form/room-search-form";
+@import "blocks/cards/room-search-data/room-search-data";
+@import "blocks/button";
+@import "blocks/array";
+
+
+
+
+
+
+
+

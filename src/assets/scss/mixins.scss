@@ -1,0 +1,21 @@
+// size to one line
+
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+// forms
+
+@mixin form($height) {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 380px;
+  height: $height;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  background: #FFFFFF;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  padding: 2.11rem 1.58rem 1.58rem;
+}

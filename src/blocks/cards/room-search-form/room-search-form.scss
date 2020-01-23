@@ -1,0 +1,61 @@
+/* ROOM-SEARCH-FORM 
+=====================================*/ 
+
+.room-search-form {
+    @include form(374px);
+  }
+  
+  .checkout__header, 
+  .guests__header, 
+  .arrival__header {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 0.63rem;
+    line-height: 0.79rem;
+    text-transform: uppercase;
+    margin-bottom: 0.29rem;
+  }
+  
+  .room-search-form__header {
+    font-weight: bold;
+    font-size: 1.32rem;
+    line-height: 1.58rem;
+    margin-bottom: 1.05rem;
+  }
+  
+  .data {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 0.79rem;
+    width: 100%;
+    height: 44px;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    border-radius: 4px;
+    margin-bottom: 1.08rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.74rem;
+    color: rgba(31, 32, 65, 0.75);
+  }
+  
+  .arrival, .checkout {
+    width: 150px;
+  }
+  
+  .guests {
+    width: 100%;
+  }
+  
+  .col {
+    position: relative;
+    display: flex;
+    height: 44px;
+    padding-left: 0.79rem;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    border-radius: 4px;
+    margin-bottom: 1.63rem;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.74rem;
+    color: rgba(31, 32, 65, 0.75);
+  }

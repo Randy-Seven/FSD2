@@ -2,7 +2,7 @@
 import './js/'
 
 // SCSS
-import './assets/scss/main.scss'
+import './main.scss'
 
 /*  // CSS 
 import './assets/css/style.css'  */
