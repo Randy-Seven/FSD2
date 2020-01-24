@@ -1,0 +1,20 @@
+.text-fields
+    .text-field
+        .text-field__header
+            label(for="text-field")|text field
+            <span class="text-field__status">Default</span> 
+        input(class="text-field__input" type="text" id="text-field" placeholder="Email")
+
+    .text-field
+        .text-field__header
+            label(for="text-field")|text field
+            <span class="text-field__status">Hover / Focus</span> 
+        input(class="text-field__input text-field__input_hover" type="text" id="text-field" placeholder="This is pretty awesome")
+
+    .text-field
+        .text-field__header
+            |dropdown
+            <span class="text-field__status">Default</span> 
+        button.text-field__input.text-field__input_dropdown Сколько гостей
+            .array
+                img(src="/assets/img/down-arrow.svg" width="12", alt="")

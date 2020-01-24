@@ -67,10 +67,12 @@ body {
 @import "blocks/logo/logo";
 @import "blocks/colors/colors";
 @import "blocks/types/types";
-@import "blocks/cards/cards";
-@import "blocks/cards/room-search-form/room-search-form";
-@import "blocks/cards/room-search-data/room-search-data";
-@import "blocks/button";
+@import "blocks/page-form-elements/form-elements";
+@import "blocks/page-form-elements/text-fields/text-fields";
+@import "blocks/page-cards/cards";
+@import "blocks/page-cards/room-search-form/room-search-form";
+@import "blocks/page-cards/room-search-data/room-search-data";
+@import "blocks/btn";
 @import "blocks/array";
 
 

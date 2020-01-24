@@ -1,0 +1,57 @@
+.text-fields {
+    width: 320px;
+}
+
+.text-field {
+    margin-bottom: 20px;
+}
+
+.text-field__input {
+    align-items: center;
+    padding-left: 0.79rem;
+    width: 100%;
+    height: 44px;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    border-radius: 4px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.74rem;
+    color: rgba(31, 32, 65, 0.75);
+    position: relative;
+
+    @include placeholder {
+        color: rgba(31, 32, 65, 0.25);
+    }
+
+    &:hover {
+        border: 1px solid rgba(31, 32, 65, 0.5);
+    }
+
+    &_hover {
+        border: 1px solid rgba(31, 32, 65, 0.5);
+        @include placeholder {
+            color: rgba(31, 32, 65, 0.75);
+        }
+    }
+    &_dropdown {
+        background: none;
+        text-align: left;
+    }
+}
+
+.text-field__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #1F2041;
+}
+
+.text-field__status {
+    font-weight: normal;
+    text-transform: uppercase;
+    color: rgba(31, 32, 65, 0.5);
+}
+
