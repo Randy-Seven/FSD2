@@ -1,16 +1,31 @@
 .text-fields {
+    display: flex;
+    flex-wrap: wrap;
     width: 320px;
+    justify-content: space-between;
 }
 
 .text-field {
-    margin-bottom: 20px;
+    margin-bottom: 1.05rem;
+    width: 100%;
+
+    &_date-dropdown {
+        width: 150px;
+        margin: 20px 0 40px 0;
+    }
+
+    &_filter-date-dropdown,
+    &_subscription {
+        width: 266px;
+        margin-bottom: 40px;
+    }
 }
 
 .text-field__input {
     align-items: center;
     padding-left: 0.79rem;
-    width: 100%;
     height: 44px;
+    width: 100%;
     border: 1px solid rgba(31, 32, 65, 0.25);
     border-radius: 4px;
     font-family: 'Montserrat', sans-serif;
@@ -32,19 +47,29 @@
             color: rgba(31, 32, 65, 0.75);
         }
     }
+
     &_dropdown {
         background: none;
         text-align: left;
+    }
+
+    &_subscription{
+        width: 224px;
+        height: 42px;
+        border: none;
+        &:hover {
+            border: none;
+        }
     }
 }
 
 .text-field__header {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 5px;
+    margin-bottom: 0.26rem;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
-    font-size: 12px;
+    font-size: 0.63rem;
     text-transform: uppercase;
     color: #1F2041;
 }
@@ -55,3 +80,15 @@
     color: rgba(31, 32, 65, 0.5);
 }
 
+.text-field__special-offers {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    border-radius: 4px;
+    padding: 1px;
+    
+    &:hover{
+        border: 1px solid rgba(31, 32, 65, 0.5);
+    }
+}

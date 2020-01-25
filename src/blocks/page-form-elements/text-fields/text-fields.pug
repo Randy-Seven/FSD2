@@ -1,20 +1,59 @@
 .text-fields
     .text-field
         .text-field__header
-            label(for="text-field")|text field
+            label(for="text-field-default")|text field
             <span class="text-field__status">Default</span> 
-        input(class="text-field__input" type="text" id="text-field" placeholder="Email")
+        input(class="text-field__input" type="email" name="email" id="text-field-default" placeholder="Email")
 
     .text-field
         .text-field__header
-            label(for="text-field")|text field
+            label(for="text-field-hover")|text field
             <span class="text-field__status">Hover / Focus</span> 
-        input(class="text-field__input text-field__input_hover" type="text" id="text-field" placeholder="This is pretty awesome")
+        input(class="text-field__input text-field__input_hover" type="text" id="text-field-hover" placeholder="This is pretty awesome")
 
-    .text-field
+    .text-field  
         .text-field__header
             |dropdown
             <span class="text-field__status">Default</span> 
         button.text-field__input.text-field__input_dropdown Сколько гостей
             .array
                 img(src="/assets/img/down-arrow.svg" width="12", alt="")
+    
+    .text-field
+        .text-field__header
+            label(for="text-field-masked")|masked text field
+            <span class="text-field__status">Default</span> 
+        input(class="text-field__input" type="text" id="text-field-masked" placeholder="ДД.ММ.ГГГГ")
+
+    .text-field.text-field_date-dropdown  
+        .text-field__header
+            |date dropdown
+        button.text-field__input.text-field__input_dropdown ДД.ММ.ГГГГ
+            .array
+                img(src="/assets/img/down-arrow.svg" width="12", alt="")
+
+    .text-field.text-field_date-dropdown   
+        .text-field__header
+            |date dropdown
+        button.text-field__input.text-field__input_dropdown 19.08.2019
+            .array
+                img(src="/assets/img/down-arrow.svg" width="12", alt="")
+
+    .text-field.text-field_filter-date-dropdown  
+        .text-field__header
+            |filter date dropdown
+            <span class="text-field__status">Default</span> 
+        button.text-field__input.text-field__input_dropdown 19 авг - 23 авг
+            .array
+                img(src="/assets/img/down-arrow.svg" width="12", alt="")
+    
+    .text-field.text-field_subscription
+        .text-field__header
+            label(for="text-field-subscription")|subscription text field
+        .text-field__special-offers
+            input(class="text-field__input text-field__input_subscription" type="email" name="email" id="text-field-subscription" placeholder="Email")
+            button.array
+                img(class="text-field__subscription-array" src="/assets/img/next-gradient.svg" width="16", alt="")
+
+
+
