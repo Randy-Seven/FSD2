@@ -13,11 +13,17 @@
                 label(for="invite" class="checkbox-buttons__item") Можно пригласить гостей (до 10 человек)
     
     .radio-buttons
-        h2.radio-buttons__header
+        h2.radio-buttons__header Radio buttons
         ul.radio-buttons__items
             li
-                input(class="radio-buttons__input" id="male" type="radio")
+                input(class="radio-buttons__input" id="male" type="radio" name="gender")
                 label(for="male" class="radio-buttons__item") Мужчина
             li
-                input(class="radio-buttons__input" id="female" type="radio")
-                label(for="female" class="radio-buttons__item") Женщина        
+                input(class="radio-buttons__input" id="female" type="radio" name="gender")
+                label(for="female" class="radio-buttons__item") Женщина 
+
+
+    .toggle
+        h2.toggle__header toggle
+        input(class="toggle__input" id="specials" type="checkbox" name="specials")
+        label(for="specials" class="toggle__item") Получать спецпредложения
