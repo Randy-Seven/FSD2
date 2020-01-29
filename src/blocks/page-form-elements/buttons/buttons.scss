@@ -191,3 +191,71 @@
     left: 24px;
     background: rgb(163, 160, 252);
 }
+
+
+/* LIKE BUTTON
+=============================*/
+
+.like-button {
+    width: 90px;
+    margin-bottom: 40px;
+}
+
+.like-button__header {
+    font-weight: bold;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #1F2041;
+    margin-bottom: 16px;
+}
+
+.like-button input {
+    display: none;
+}
+
+.like-button .like-button__item {
+    display: block;
+    position: relative;
+    width: 40px;
+    height: 20px;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    border-radius: 10px;
+
+    &:hover {
+        border: 1px solid #BC9CFF;
+    }
+
+    &::before {
+        position: absolute;
+        content: "";
+        width: 20px;
+        height: 20px;
+        background: url(/assets/img/favorite-border.svg) no-repeat 4px 5px;
+        transition: .5s;
+    }
+
+    &::after {
+        position: absolute;
+        top: 3px;
+        left: 20px;
+        content: "12";
+        font-size: 10px;
+        text-align: center;
+        color: rgba(31, 32, 65, 0.25);
+        transition: .5s;
+    }
+}
+
+.like-button input:checked + label::before {
+    background: url(/assets/img/favorite-color.svg) no-repeat 4px 5px;
+}
+
+.like-button input:checked + label::after {
+    color: #BC9CFF;
+    content: "13";
+}
+
+.like-button input:checked + label {
+    border: 1px solid #BC9CFF;
+}
+
