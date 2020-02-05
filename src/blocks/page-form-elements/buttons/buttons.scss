@@ -44,6 +44,7 @@
 
 .checkbox-buttons__item {
     position: relative;
+    cursor: pointer;
     font-size: 0.74rem;
     color: rgba(31, 32, 65, 0.5);
     
@@ -96,10 +97,19 @@
             background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
             border-radius: 10px;
         }
+
+        & input:checked + label {
+            color: rgba(31, 32, 65, 0.75);
+        }
+
+        & input:checked + label::before {
+            border: 1px solid #BC9CFF;
+        }
     }
 }
 
 .radio-buttons__item {
+    cursor: pointer;
     position: relative;
     font-size: 0.74rem;
     color: rgba(31, 32, 65, 0.5);
@@ -213,8 +223,9 @@
     display: none;
 }
 
-.like-button .like-button__item {
+.like-button__item {
     display: block;
+    cursor: pointer;
     position: relative;
     width: 40px;
     height: 20px;
@@ -258,4 +269,48 @@
 .like-button input:checked + label {
     border: 1px solid #BC9CFF;
 }
+
+/* RATE BUTTON
+=============================*/
+
+.rate-button {
+    width: 120px;
+}
+
+.rate-button__header {
+    font-weight: bold;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #1F2041;
+    margin-bottom: 16px;
+}
+
+.rate-button__items {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+}
+
+.rate-button__input {
+    display: none;
+}
+
+.rate-button__item {
+    width: 24px;
+    height: 24px;
+    background: url(/assets/img/star-border.svg) no-repeat 50% 50%;
+    cursor: pointer;
+    transition: .2s;
+
+    &:hover,
+    &:hover ~ label {
+        background: url(/assets/img/star.svg) no-repeat 50% 50%;
+    }
+}
+
+.rate-button__items input:checked ~ label {
+    background: url(/assets/img/star.svg) no-repeat 50% 50%;
+}
+
+
 
