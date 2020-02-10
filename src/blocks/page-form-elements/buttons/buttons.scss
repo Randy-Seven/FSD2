@@ -1,6 +1,7 @@
-.buttons {
+.different-buttons {
     width: 260px;
     font-family: 'Montserrat', sans-serif;
+    margin-right: 6.95rem;
 } 
 
 /* CHECKBOX BUTTONS 
@@ -8,7 +9,7 @@
 
 .checkbox-buttons {
     width: 222px;
-    margin-bottom: 41px;
+    margin-bottom: 2.16rem;
 }
 
 .checkbox-buttons__header  {
@@ -69,12 +70,12 @@
 
 .radio-buttons {
     width: 221px;
-    margin-bottom: 37px;
+    margin-bottom: 1.95rem;
 }
 
 .radio-buttons__header {
     font-weight: bold;
-    font-size: 12px;
+    font-size: 0.63rem;
     text-transform: uppercase;
     color: #1F2041;
     margin-bottom: 0.53rem;
@@ -113,7 +114,7 @@
     position: relative;
     font-size: 0.74rem;
     color: rgba(31, 32, 65, 0.5);
-    padding-left: 30px;
+    padding-left: 1.58rem;
 
     &:hover {
         color: rgba(31, 32, 65, 0.75);
@@ -145,12 +146,12 @@
 
 .toggle {
     width: 260px;
-    margin-bottom: 40px;
+    margin-bottom: 2.11rem;
 }
 
 .toggle__header {
     font-weight: bold;
-    font-size: 12px;
+    font-size: 0.63rem;
     text-transform: uppercase;
     color: #1F2041;
     margin-bottom: 0.53rem;
@@ -162,9 +163,9 @@
  
 .toggle__item {
     position: relative;
-    font-size: 14px;
+    font-size: 0.74rem;
     color: rgba(31, 32, 65, 0.75);
-    padding-left: 50px;
+    padding-left: 2.63rem;
     cursor: pointer;
 
     &::before {
@@ -208,15 +209,15 @@
 
 .like-button {
     width: 90px;
-    margin-bottom: 40px;
+    margin-bottom: 2.11rem;
 }
 
 .like-button__header {
     font-weight: bold;
-    font-size: 12px;
+    font-size: 0.63rem;
     text-transform: uppercase;
     color: #1F2041;
-    margin-bottom: 16px;
+    margin-bottom: 0.84rem;
 }
 
 .like-button input {
@@ -279,10 +280,10 @@
 
 .rate-button__header {
     font-weight: bold;
-    font-size: 12px;
+    font-size: 0.63rem;
     text-transform: uppercase;
     color: #1F2041;
-    margin-bottom: 16px;
+    margin-bottom: 0.84rem;
 }
 
 .rate-button__items {
