@@ -60,11 +60,12 @@
     cursor: pointer;
 }
 
-/* RANGE-SLIDER  
+/* BIG-BUTTONS
 ==============================*/
 
 .big-buttons {
     width: 320px;
+    margin-bottom: 40px;
 }
 
 .big-buttons__header {
@@ -147,6 +148,7 @@
     font-weight: bold;
     font-size: 0.63rem;
     color:#FFFFFF;
+    cursor: pointer;
     transition: .2s;
 
     &:hover {
@@ -161,4 +163,78 @@
     width: 44px;
     height: 44px;
     background: url(/assets/img/next.svg) no-repeat 50% 50%;  
+}
+
+/* PAGINATION
+==============================*/
+
+.pagination__header {
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #1F2041;
+    margin-bottom: 16px;
+}
+
+.pagination__pages {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 11px;
+}
+
+.pagination__page,
+.pagination__pages span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 40px;
+    height: 40px;
+    font-family: inherit;
+    font-size: 12px;
+    color: rgba(31, 32, 65, 0.5);
+    border-radius: 22px;
+    transition: .4s;
+
+    &:hover {
+        background: #BC9CFF;
+        opacity: 0.5;
+        color: #FFFFFF;
+        border-radius: 22px;
+        font-weight: bold;
+    }
+
+    &_current {
+        background: #BC9CFF;
+        border-radius: 22px;
+        font-weight: bold;
+        color: #FFFFFF;
+    }
+
+    &_next {
+        background: #6FCF97 url(/assets/img/next.svg) 50% 50% no-repeat;
+        border-radius: 22px;
+
+        &:hover {
+            background: #6FCF97 url(/assets/img/next.svg) 50% 50% no-repeat;
+            opacity: 0.5;
+        }
+    }
+}
+
+.pagination__page_current:hover {
+    opacity: 1;
+}
+
+.pagination__pages span:hover {
+    color: rgba(31, 32, 65, 0.5);
+    background: #FFFFFF;
+    font-weight: normal;
+    opacity: 1;
+}
+
+.pagination__total {
+    font-family: inherit;
+    font-size: 14px;
+    color: rgba(31, 32, 65, 0.75);
 }
