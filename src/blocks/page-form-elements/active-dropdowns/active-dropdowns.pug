@@ -1,0 +1,103 @@
+.active-dropdowns
+
+    .facilities-dropdown 
+
+        .text-field__header <!-- From "text-fields.pug" -->
+            |dropdown
+            <span class="text-field__status">Default</span> 
+
+        .facilities-dropdown__hover
+            button.text-field__input.text-field__input_dropdown.facilities-dropdown__btn 2 спальни, 2 кровати...
+                .arrow
+                    img(src="/assets/img/down-arrow.svg" width="12", alt="")
+
+            ul.facilities-dropdown__expand
+                li.facilities-dropdown__rooms
+                    span Спальни 
+                    .facilities-dropdown__count
+                        button.facilities-dropdown__plus-minus -
+                        | 2
+                        button.facilities-dropdown__plus-minus +
+                li.facilities-dropdown__rooms
+                    span Кровати
+                    .facilities-dropdown__count
+                        button.facilities-dropdown__plus-minus -
+                        | 2
+                        button.facilities-dropdown__plus-minus +
+                li.facilities-dropdown__rooms
+                    span Ванные комнаты
+                    .facilities-dropdown__count
+                        button.facilities-dropdown__plus-minus.facilities-dropdown__plus-minus_disabled -
+                        | 0
+                        button.facilities-dropdown__plus-minus +
+
+    .guests-dropdown 
+    
+        .text-field__header <!-- From "text-fields.pug" -->
+            |dropdown
+
+        .facilities-dropdown__hover
+            button.text-field__input.text-field__input_dropdown.facilities-dropdown__btn Сколько гостей
+                .arrow
+                    img(src="/assets/img/down-arrow.svg" width="12", alt="")
+
+            ul.facilities-dropdown__expand.guests-dropdown__btn
+                li.facilities-dropdown__rooms
+                    span Взрослые 
+                    .facilities-dropdown__count
+                        button.facilities-dropdown__plus-minus.facilities-dropdown__plus-minus_disabled -
+                        | 0
+                        button.facilities-dropdown__plus-minus +
+                li.facilities-dropdown__rooms
+                    span Дети
+                    .facilities-dropdown__count
+                        button.facilities-dropdown__plus-minus.facilities-dropdown__plus-minus_disabled -
+                        | 0
+                        button.facilities-dropdown__plus-minus +
+                li.facilities-dropdown__rooms
+                    span Младенцы
+                    .facilities-dropdown__count
+                        button.facilities-dropdown__plus-minus.facilities-dropdown__plus-minus_disabled -
+                        | 0
+                        button.facilities-dropdown__plus-minus +
+                .guests-dropdown__apply-cancel    
+                    button.guests-dropdown__apply Применить
+
+    .guests-dropdown 
+    
+        .text-field__header <!-- From "text-fields.pug" -->
+            |dropdown
+
+        .facilities-dropdown__hover
+            button.text-field__input.text-field__input_dropdown.facilities-dropdown__btn 3 гостя
+                .arrow
+                    img(src="/assets/img/down-arrow.svg" width="12", alt="")
+
+            ul.facilities-dropdown__expand.guests-dropdown__btn
+                li.facilities-dropdown__rooms
+                    span Взрослые 
+                    .facilities-dropdown__count
+                        button.facilities-dropdown__plus-minus -
+                        | 2
+                        button.facilities-dropdown__plus-minus +
+                li.facilities-dropdown__rooms
+                    span Дети
+                    .facilities-dropdown__count
+                        button.facilities-dropdown__plus-minus -
+                        | 1
+                        button.facilities-dropdown__plus-minus +
+                li.facilities-dropdown__rooms
+                    span Младенцы
+                    .facilities-dropdown__count
+                        button.facilities-dropdown__plus-minus.facilities-dropdown__plus-minus_disabled -
+                        | 0
+                        button.facilities-dropdown__plus-minus +
+                .guests-dropdown__apply-cancel
+                    button.guests-dropdown__apply Применить    
+                    button.guests-dropdown__apply Очистить
+                    
+                    
+
+
+
+

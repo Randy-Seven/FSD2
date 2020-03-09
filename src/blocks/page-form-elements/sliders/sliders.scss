@@ -8,21 +8,21 @@
 
 .range-slider {
     width: 266px;
-    margin-bottom: 41px;
+    margin-bottom: 2.16rem;
 }
 
 .range-slider__header {
     display: flex;
     justify-content: space-between;
     font-weight: bold;
-    font-size: 12px;
+    font-size: 0.63rem;
     text-transform: uppercase;
     color: #1F2041;
-    margin-bottom: 23px;
+    margin-bottom: 1.21rem;
 
     & span {
         font-weight: normal;
-        font-size: 12px;
+        font-size: 0.63rem;
         text-transform: uppercase;
         color: rgba(31, 32, 65, 0.5);
     }
@@ -65,21 +65,21 @@
 
 .big-buttons {
     width: 320px;
-    margin-bottom: 40px;
+    margin-bottom: 2.11rem;
 }
 
 .big-buttons__header {
     width: 51px;
     height: 15px;
     font-weight: bold;
-    font-size: 12px;
+    font-size: 0.63rem;
     text-transform: uppercase;
     color: #1F2041;
-    margin-bottom: 16px;
+    margin-bottom: 0.84rem;
 }
 
 .big-buttons__register {
-    margin-bottom: 20px;
+    margin-bottom: 1.05rem;
     width: 218px;
     display: flex;
     justify-content: space-between;
@@ -87,12 +87,12 @@
 
 .big-buttons__sign-up {
     font-family: inherit;
-    padding: 0 20px;
+    padding: 0 1.05rem;
     height: 44px;
     background: rgba(163, 160, 252, 1);
     border-radius: 22px;
     font-weight: bold;
-    font-size: 12px;
+    font-size: 0.63rem;
     text-transform: uppercase;
     color: #FFFFFF;
     transition: .2s;
@@ -115,13 +115,13 @@
 }
 
 .big-buttons__links {
-    margin-bottom: 20px;
+    margin-bottom: 1.05rem;
 }
 
 .big-buttons__click-me {
     font-family: inherit;
     font-weight: bold;
-    font-size: 12px;
+    font-size: 0.63rem;
     text-transform: uppercase;
     color: #BC9CFF;
     cursor: pointer;
@@ -171,16 +171,16 @@
 .pagination__header {
     font-family: inherit;
     font-weight: bold;
-    font-size: 12px;
+    font-size: 0.63rem;
     text-transform: uppercase;
     color: #1F2041;
-    margin-bottom: 16px;
+    margin-bottom: 0.84rem;
 }
 
 .pagination__pages {
     display: flex;
     flex-direction: row;
-    margin-bottom: 11px;
+    margin-bottom: 0.58rem;
 }
 
 .pagination__page,
@@ -191,7 +191,7 @@
     min-width: 40px;
     height: 40px;
     font-family: inherit;
-    font-size: 12px;
+    font-size: 0.63rem;
     color: rgba(31, 32, 65, 0.5);
     border-radius: 22px;
     transition: .4s;
@@ -235,6 +235,6 @@
 
 .pagination__total {
     font-family: inherit;
-    font-size: 14px;
+    font-size: 0.74rem;
     color: rgba(31, 32, 65, 0.75);
 }

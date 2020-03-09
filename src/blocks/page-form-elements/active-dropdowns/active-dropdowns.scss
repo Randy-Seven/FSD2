@@ -1,0 +1,117 @@
+.active-dropdowns {
+    margin-top: 4.21rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* FACILITIES DROPDOWN 
+================================ */
+
+.facilities-dropdown {
+    width: 266px;
+    margin-right: 5.58rem;
+}
+
+.facilities-dropdown__expand {
+    position: absolute;
+    z-index: 1;
+    width: 266px;
+    border: 1px solid rgba(31, 32, 65, 0.5);
+    border-top: 0px;
+    border-radius: 0 0 4px 4px;
+    display: none;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.63rem;
+    color: #1F2041;
+    background: white;
+}
+
+.facilities-dropdown__hover:hover  .facilities-dropdown__expand {
+    display: block;
+}
+
+.facilities-dropdown__hover:hover  .facilities-dropdown__btn {
+    border: 1px solid rgba(31, 32, 65, 0.5);
+    border-radius: 4px 4px 0px 0px;
+}
+
+.facilities-dropdown__rooms {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.37rem 0.37rem 0 0.79rem;
+
+    &:last-child {
+        margin-bottom: 0.37rem;
+    }
+}
+
+.facilities-dropdown__count {
+    display: flex;
+    width: 92px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.facilities-dropdown__plus-minus {
+    display: flex;
+    width: 30px;
+    height: 30px;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    border-radius: 50%;
+    color: rgba(31, 32, 65, 0.5);
+    font-family: inherit;
+    font-weight: normal;
+    font-size: 0.95rem;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    cursor: pointer;
+    transition: .2s;
+
+    &:hover {
+        border: none;
+        background:rgba(31, 32, 65, 0.25) 1px 1px;
+        color: white;
+    }
+
+    &_disabled,
+    &_disabled:hover {
+        border: 1px solid rgba(31, 32, 65, 0.1);
+        color: rgba(31, 32, 65, 0.1);
+        background: white;
+    }
+}
+
+/* GUESTS DROPDOWN 
+================================ */
+
+.guests-dropdown {
+    width: 320px;
+}
+
+.guests-dropdown__btn {
+    width: 320px;
+}
+
+.guests-dropdown__apply-cancel {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.05rem 0.37rem 0.68rem 0.74rem;
+    flex-direction: row-reverse;
+}
+
+.guests-dropdown__apply {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #BC9CFF;
+    cursor: pointer;
+
+    &:hover {
+        color: rgba(31, 32, 65, 0.5);
+    }
+}
