@@ -3,13 +3,14 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 /* FACILITIES DROPDOWN 
 ================================ */
 
 .facilities-dropdown {
-    width: 266px;
+    min-width: 266px;
     margin-right: 5.58rem;
 }
 
@@ -90,7 +91,7 @@
 ================================ */
 
 .guests-dropdown {
-    width: 320px;
+    min-width: 320px;
 }
 
 .guests-dropdown__btn {

@@ -3,6 +3,7 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 } 
 
 /* ADDITIONALS CHECKBOX
@@ -14,7 +15,7 @@
 
 .additionals-checkbox__btn {
     font-weight: bold;
-    font-size: 12px;
+    font-size: 0.63rem;
     text-transform: uppercase;
     color: #1F2041;
     border: none;
@@ -49,34 +50,36 @@
 ============================= */
 
 .rich-checkbox {
-    margin-top: 14.5px;
-    margin-right: 41px;
+    margin-top: 0.76rem;
+    margin-right: -2.79rem;
 }
 
 .additionals-checkbox__expand_rich {
     display: block;
     z-index: 0;
+    position: relative;
 }
 
 .rich-checkbox__header {
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
-    font-size: 12px;
+    font-size: 0.63rem;
     text-transform: uppercase;
     color: #1F2041;
-    margin-bottom: 13px;
+    margin-bottom: 0.68rem;
 }
 
 .rich-checkbox__description {
-    font-size: 12px;
+    font-size: 0.63rem;
     color: rgba(31, 32, 65, 0.5);
-    margin-bottom: -4px;
+    margin-bottom: -0.21rem;
+    margin-top: 0.26rem;
 }
 
 .rich-checkbox__item {
     font-weight: bold;
     color: rgba(31, 32, 65, 0.75);
-    margin-bottom: 5px;
+    margin-bottom: 0.26rem;
 
     &:hover {
         color:rgba(31, 32, 65, 1);
@@ -87,29 +90,29 @@
 ============================= */
 
 .bullet-list {
-    margin-top: 14.5px;
-    margin-right: 29px;
+    margin-top: 0.76rem;
+    margin-right: 1.47rem;
     width: 292px;
 
 }
 
 .bullet-list__header {
-    margin-bottom: 18px;
+    margin-bottom: 0.95rem;
 }
 
 .bullet-list__item {
     position: relative;
     font-family: 'Montserrat', sans-serif;
     font-weight: normal;
-    font-size: 14px;
+    font-size: 0.74rem;
     color: rgba(31, 32, 65, 0.75);
-    margin-bottom: 12px;
+    margin-bottom: 0.95rem;
 
     &::before {
         position: absolute;
         content: "";
-        top: 3px;
-        left: -20.43px;
+        top: 0.21rem;
+        left: -1.08rem;
         width: 10.43px;
         height: 10px;
         background: rgba(31, 32, 65, 0.25);
@@ -118,5 +121,6 @@
 }
 
 .bullet-list ul {
-    padding-left: 20.86px;
+    padding-left: 1.10rem;
 }
+

@@ -144,7 +144,7 @@ module.exports = {
     new CopyWebpackPlugin([
 
       {
-        from: `${PATHS.src}/blocks/**/*.svg`,
+        from: `${PATHS.src}/blocks/**/img/*`,
         to: `${PATHS.assets}img`,
         flatten: true
       },
