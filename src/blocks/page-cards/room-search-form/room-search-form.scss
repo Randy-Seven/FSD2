@@ -7,32 +7,33 @@
   border: 1px solid rgba(0, 0, 0, 0.12);
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  max-height: 374px;
 }
 
 .room-search-form__inner {
-  margin: 40px 30px 30px;
+  margin: 2.11rem 1.58rem 1.58rem;
 }
 
 .room-search-form__header {
   font-family: 'Quicksand', sans-serif;
   font-weight: bold;
-  font-size: 24px;
-  line-height: 30px;
+  font-size: 1.26rem;
+  line-height: 1.58rem;
   color: #1F2041;
-  margin-right: 14px;
-  margin-bottom: 20px;
+  margin-right: 0.74rem;
+  margin-bottom: 1.05rem;
 }
 
 .room-search-form__arrival-wrapper {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 21px; 
+  margin-bottom: 1.11rem; 
 }
 
 .room-search-form__arrival {
-  min-width: 150px;
+  min-width: 7.89rem;
 }
 
 .room-search-form__margin {
-  margin-bottom: 31px;
+  margin-bottom: 1.63rem;
 }

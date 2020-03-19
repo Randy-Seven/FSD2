@@ -2,12 +2,14 @@
 =====================================*/ 
 
 .cards {
-    margin-top: 7.89rem;
-    padding-top: 7.89rem;
-    padding-bottom: 7.89rem;
-    background-color:#E5E5E5;
-  }
+  margin-top: 7.89rem;
+  padding-top: 7.89rem;
+  padding-bottom: 7.89rem;
+  background-color:#E5E5E5;
+}
   
-  .cards__inner {
-    display: flex;
-  }
+.cards__inner {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
