@@ -1,0 +1,82 @@
+.calendar {
+    width: 320px;
+    max-height: 369px;
+    background: #FFFFFF;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+    border-radius: 4px;
+}
+
+.calendar__inner {
+    margin: 20px;
+}
+
+.calendar__month {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    font-size: 19px;
+    line-height: 24px;
+    text-align: center;
+    color: #1F2041;
+    margin-bottom: 30px;
+}
+
+.calendar__next-month {
+    width: 24px;
+    height: 24px;
+    background: url(/assets/img/next_purple.svg) no-repeat 4.5px 3.5px;
+    cursor: pointer;
+
+    &_previous {
+        transform: rotate(180deg);
+    }
+}
+
+.calendar__week-days {
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    color: rgba(31, 32, 65, 0.5);
+}
+
+.calendar__week-days tr td,
+.calendar__week-days tr th {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.calendar__week-days tr th {
+    color: #BC9CFF;
+    cursor: text;
+}
+
+.calendar__apply {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    font-size: 12px;
+    line-height: 15px;
+}
+
+.calendar__disabled {
+    color: rgba(31, 32, 65, 0.25);
+}
+
+.calendar__current {
+    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+    border-radius: 22px;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+.calendar__active {
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    border-radius: 22px;
+    font-weight: bold;
+    color: #FFFFFF;
+}
