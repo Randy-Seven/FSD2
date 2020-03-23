@@ -1,0 +1,42 @@
+.register
+    .register__inner
+        h1.register__header Регистрация аккаунта
+        .text-field.register__name-margin <!-- From text-fields.pug -->
+            input(class="text-field__input"  placeholder="Имя")
+
+        .register__surname-margin <!-- From text-fields.pug -->
+            input(class="text-field__input"  placeholder="Фамилия")
+
+        .radio-buttons.register__gender-margin
+            ul.radio-buttons__items
+                li
+                    input(class="radio-buttons__input" id="male1" type="radio" name="gender1")
+                    label(for="male1" class="radio-buttons__item") Мужчина
+                li
+                    input(class="radio-buttons__input" id="female1" type="radio" name="gender1")
+                    label(for="female1" class="radio-buttons__item") Женщина
+
+        .register__birthday-margin <!-- From text-fields.pug -->
+            .text-field__header
+                label(for="text-field-masked")| дата рождения 
+            input(class="text-field__input" type="text" placeholder="ДД.ММ.ГГГГ")
+
+        .register__email-margin
+            .text-field__header
+                label(for="text-field-default")|данные для входа в сервис
+            input(class="text-field__input" type="email" name="email1" placeholder="Email")
+
+        .register__password-margin
+            input(class="text-field__input" type="password" placeholder="Пароль")
+        
+        .toggle.register__toggle-margin       
+            input(class="toggle__input" id="specials1" type="checkbox" name="specials1")
+            label(for="specials1" class="toggle__item") Получать спецпредложения
+
+        button.big-buttons__arrow-button.register__button-margin перейти к оплате
+            .big-buttons__arrow
+
+        .register-have-account
+            p Уже есть аккаунт на Toxin
+            button.big-buttons__sign-up.big-buttons__sign-up_sign-in click me
+

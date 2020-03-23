@@ -56,9 +56,9 @@ body {
 }
 
 .clearfix::after {
-  content:"";
-  display: table;
+  content: "";
   clear: both;
+  display: table;
 }
 
 /* BLOCKS 
@@ -78,6 +78,7 @@ body {
 @import "blocks/page-cards/room-search-form/room-search-form";
 @import "blocks/page-cards/room-search-data/room-search-data";
 @import "blocks/page-cards/calendar/calendar";
+@import "blocks/page-cards/register/register";
 
 
 

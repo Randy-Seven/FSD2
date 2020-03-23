@@ -1,4 +1,6 @@
 .calendar {
+    float: right;
+    margin-bottom: 40px;
     width: 320px;
     max-height: 369px;
     background: #FFFFFF;
@@ -48,6 +50,15 @@
     text-align: center;
     vertical-align: middle;
     cursor: pointer;
+    border-radius: 22px;
+}
+
+.calendar__week-days tr td:hover {
+    background: #BC9CFF;
+    opacity: 0.5;
+    color: #FFFFFF;
+    border-radius: 22px;
+    font-weight: bold;
 }
 
 .calendar__week-days tr th {
@@ -80,3 +91,5 @@
     font-weight: bold;
     color: #FFFFFF;
 }
+
+
