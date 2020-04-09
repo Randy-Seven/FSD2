@@ -1,6 +1,5 @@
 .calendar {
-    float: right;
-    margin-bottom: 40px;
+    margin-bottom: 2.11rem;
     width: 320px;
     max-height: 369px;
     background: #FFFFFF;
@@ -10,7 +9,7 @@
 }
 
 .calendar__inner {
-    margin: 20px;
+    margin: 1.05rem;
 }
 
 .calendar__month {
@@ -18,11 +17,11 @@
     justify-content: space-between;
     font-family: 'Quicksand', sans-serif;
     font-weight: bold;
-    font-size: 19px;
-    line-height: 24px;
+    font-size: 1rem;
+    line-height: 1.26rem;
     text-align: center;
     color: #1F2041;
-    margin-bottom: 30px;
+    margin-bottom: 1.58rem;
 }
 
 .calendar__next-month {
@@ -37,9 +36,9 @@
 }
 
 .calendar__week-days {
-    margin-bottom: 20px;
+    margin-bottom: 1.05rem;
     font-family: 'Montserrat', sans-serif;
-    font-size: 12px;
+    font-size: 0.63rem;
     color: rgba(31, 32, 65, 0.5);
 }
 
@@ -70,8 +69,8 @@
     display: flex;
     justify-content: space-between;
     flex-direction: row-reverse;
-    font-size: 12px;
-    line-height: 15px;
+    font-size: 0.63rem;
+    line-height: 0.79rem;
 }
 
 .calendar__disabled {

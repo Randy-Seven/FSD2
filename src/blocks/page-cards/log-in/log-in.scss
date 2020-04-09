@@ -1,0 +1,29 @@
+.log-in {
+    width: 380px;
+    height: 358px; 
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+
+.log-in__inner {
+    margin: 2.11rem 1.58rem 1.68rem 1.58rem;
+}
+
+.log-in__header {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    font-size: 1.26rem;
+    line-height: 1.58rem;
+    color: #1F2041;
+    margin-bottom: 1.05rem;
+}
+
+.log-in__email-margin {
+    margin-bottom: 0.53rem;
+}
+
+.log-in__password-margin {
+    margin-bottom: 1.05rem;
+}

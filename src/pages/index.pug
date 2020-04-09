@@ -16,10 +16,17 @@ block content
 				include ../blocks/page-form-elements/active-dropdowns/active-dropdowns.pug
 				include ../blocks/page-form-elements/checkbox-lists/checkbox-lists.pug
 				include ../blocks/page-form-elements/room-information/room-information.pug
-	.cards
+	.cards.clearfix
 		.container
 			.cards__inner
-				include ../blocks/page-cards/room-search-form/room-search-form.pug
-				include ../blocks/page-cards/calendar/calendar.pug
-				include ../blocks/page-cards/room-search-data/room-search-data.pug
-				include ../blocks/page-cards/register/register.pug
+				.cards__first-column
+					include ../blocks/page-cards/room-search-form/room-search-form.pug
+					include ../blocks/page-cards/register/register.pug					
+				.cards__second-column
+					include ../blocks/page-cards/room-search-data/room-search-data.pug
+					include ../blocks/page-cards/log-in/log-in.pug
+				.cards__third-column
+					include ../blocks/page-cards/calendar/calendar.pug					
+					include ../blocks/page-cards/matched-room888/matched-room888.pug					
+					
+					

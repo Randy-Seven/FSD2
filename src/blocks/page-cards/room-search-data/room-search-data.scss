@@ -2,9 +2,7 @@
 ============================*/
 
 .room-search-data {
-    float: right;
-    margin-right: 38px;
-    margin-bottom: 40px;
+    margin-bottom: 2.11rem;
     width: 382px;
     background: #FFFFFF;
     border: 1px solid rgba(0, 0, 0, 0.12);
@@ -15,23 +13,23 @@
 .room-search-data__header {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 20px;
+    margin-bottom: 1.05rem;
     position: relative;
 }
 
 .room-search-data__lux-number {
     position: relative;
     font-family: 'Quicksand', sans-serif;
-    font-size: 24px;
+    font-size: 1.26rem;
     font-weight: bold;
     color: #1F2041;
-    padding-left: 22px;
-    line-height: 17px;
+    padding-left: 1.16rem;
+    line-height: 0.89rem;
 
     span {
         font-family: 'Montserrat', sans-serif;
         font-weight: bold;
-        font-size: 12px;
+        font-size: 0.63rem;
         text-transform: uppercase;
         color: #BC9CFF;
     }
@@ -51,31 +49,31 @@
     position: absolute;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
-    font-size: 14px;
-    line-height: 18px;
+    font-size: 0.74rem;
+    line-height: 0.95rem;
     color: rgba(31, 32, 65, 0.5);
     bottom: 0;
     right: 0;
 
     span {
         font-weight: normal;
-        font-size: 12px;
+        font-size: 0.63rem;
     }
 }
 
 .room-search-data__cost {
-    margin-top: -10px;
-    margin-bottom: 30px;
+    margin-top: -0.53rem;
+    margin-bottom: 1.58rem;
 }
 
 .room-search-data__cost-count {
     display: flex;
     justify-content: space-between;
     font-family: 'Montserrat', sans-serif;
-    font-size: 14px;
-    line-height: 24px;
+    font-size: 0.74rem;
+    line-height: 1.26rem;
     color: rgba(31, 32, 65, 0.75);
-    margin-bottom: 10px;
+    margin-bottom: 0.53rem;
 }
 
 .room-search-data__first-column {
@@ -92,10 +90,10 @@
     content: 'i';
     font-family: inherit;
     font-weight: bold;
-    font-size: 12px;
+    font-size: 0.63rem;
     color: rgba(31, 32, 65, 0.25);
     text-align: center;
-    line-height: 20px;
+    line-height: 1.05rem;
     border: 1px solid rgba(31, 32, 65, 0.25);
     border-radius: 50%;
 }
@@ -105,10 +103,10 @@
     justify-content: space-between;
     font-family: 'Quicksand', sans-serif;
     font-weight: bold;
-    font-size: 19px;
-    line-height: 24px;
+    font-size: 1rem;
+    line-height: 1.26rem;
     color: #1F2041;
-    margin-bottom: 20px;
+    margin-bottom: 1.05rem;
     position: relative;
 }
 
