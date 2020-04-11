@@ -36,10 +36,40 @@
 }
 
 .matched-room888__inner {
-    position: relative;
     margin: 20px 17px 19px 20px; 
 }
 
 .matched-room888__font {
     font-size: 21px;
+}
+
+.matched-room888__cost-wrapper {
+    position: relative;
+    margin-bottom: 12px;
+}
+
+.matched-room888__line {
+    height: 1px;
+    background: rgba(31, 32, 65, 0.1);
+    margin-bottom: 8px;
+}
+
+.matched-room888__rate-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.matched-room888__feedbacks {
+    display: flex;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    color: rgba(31, 32, 65, 0.5);
+    padding-top: 2px;
+
+    span {
+        margin-left: 5px;
+        font-weight: normal;
+    }
 }
