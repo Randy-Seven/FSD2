@@ -1,48 +1,49 @@
 .footer-info {
     background: #FFFFFF;
     box-shadow: 0px 1px 0px rgba(31, 32, 65, 0.1);
+    margin-bottom: 0.05rem;
 }
 
 .footer-info__inner {
     display: flex; 
     justify-content: space-between;
-    padding: 100px 0;
+    padding: 5.26rem 0;
 }
 
 .footer-info__about {
     width: 260px;
     font-family: 'Montserrat', sans-serif;
-    font-size: 14px;
-    line-height: 24px;
+    font-size: 0.74rem;
+    line-height: 1.26rem;
     color: rgba(31, 32, 65, 0.75);
 }
 
 .footer-info__logo-margin {
-    margin-bottom: 20px;
+    margin-bottom: 1.05rem;
 }
 
 .footer-info__list {
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
-    font-size: 12px;
-    line-height: 15px;
+    font-size: 0.63rem;
+    line-height: 0.79rem;
     text-transform: uppercase;
     color: #1F2041;
     width: 143px;
 }
 
 .footer-info__list li {
-    margin-top: 20px;
+    margin-top: 1.05rem;
 
     &:first-child {
-        margin-top: 21px;
+        margin-top: 1.11rem;
     }
 }
 
 .footer-info__list li a {
     font-weight: normal;
-    font-size: 14px;
-    line-height: 17px;
+    font-size: 0.74rem;
+    line-height: 0.89rem;
     color: rgba(31, 32, 65, 0.5);
     text-transform: none;
     transition: .2s;
@@ -68,11 +69,11 @@
     font-family: 'Montserrat', sans-serif;
     font-weight: normal;
     text-transform: none;
-    font-size: 14px;
-    line-height: 24px;
+    font-size: 0.74rem;
+    line-height: 1.26rem;
     color: rgba(31, 32, 65, 0.75);
     
     &:first-child {
-        margin-top: 17px;
+        margin-top: 0.89rem;
     }
 }

@@ -1,0 +1,40 @@
+.footer-copyright {
+    height: 70px;
+    background: #FFFFFF;
+    box-shadow: 0px 1px 0px rgba(31, 32, 65, 0.1);
+    margin-bottom: 2.11rem;
+}
+
+.footer-copyright__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-copyright__rights {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.74rem;
+    color: rgba(31, 32, 65, 0.75);
+    line-height: 3.68rem;
+}
+
+.footer-copyright__social {
+    display: flex;
+}
+
+.footer-copyright__icon {
+    width: 24px;
+    height: 24px;
+    margin-left: 1.05rem;
+    cursor: pointer;
+}
+
+.footer-copyright__icon:hover use {
+    transition: fill .2s;
+    fill: rgba(163, 160, 252, 0.5);
+}
+
+.footer-copyright__icon use {
+    fill: #BC9CFF;
+}
+

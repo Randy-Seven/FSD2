@@ -1,0 +1,25 @@
+.footer {
+    background: #FFFFFF;
+    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+}
+
+.footer__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 5.26rem 15.79rem 5.79rem 15.79rem;
+}
+
+.footer__logo-margin {
+    margin-bottom: 1.05rem;
+}
+
+.footer__text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.74rem;
+    line-height: 1.26rem;
+    text-align: center;
+    color: rgba(31, 32, 65, 0.75);
+    width: 560px;
+    margin-bottom: 1.32rem;
+}
