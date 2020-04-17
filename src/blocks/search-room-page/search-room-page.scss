@@ -1,0 +1,40 @@
+.search-room__inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.search-room__menu {
+    width: 266px;
+    margin-top: -10px;
+}
+
+.search-room__rooms {
+    width: 834px;
+}
+
+.search-room__arrival-date-margin {
+    margin-bottom: 20.44px;
+}
+
+.search-room__guests-margin {
+    margin-bottom: 30.44px;
+}
+
+.search-room__range-margin {
+    margin-bottom: 13.56px;
+}
+
+.search-room__cost-per-day {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    line-height: 14px;
+    color: rgba(31, 32, 65, 0.5);
+}
+
+.search-room__slider-margin {
+    margin-bottom: 30px;
+}
+
+.search-room__checkbox-margin {
+    margin-bottom: 30.88px;
+}

@@ -1,6 +1,12 @@
-extends ../assets/pug/layout/main.pug
+include ../assets/pug/mixins
 
-block content
+doctype html
+head
+	meta(charset='UTF-8')
+	meta(name='viewport', content='width=device-width, initial-scale=1.0')
+	meta(http-equiv='X-UA-Compatible', content='ie=edge')
+	title Toxin
+body
 	include ../blocks/logo/logo.pug
 	.colors-and-types
 		.container
@@ -33,7 +39,9 @@ block content
 			.page-headers-footers__inner
 				include ../blocks/page-headers-footers/header1/header1.pug				
 				include ../blocks/page-headers-footers/header2/header2.pug				
-				include ../blocks/page-headers-footers/footer-info/footer-info.pug				
-				include ../blocks/page-headers-footers/footer-copyright/footer-copyright.pug				
+				include ../blocks/page-headers-footers/footer-info/footer-info.pug
+				.footer-copyright__margin 
+					include ../blocks/page-headers-footers/footer-copyright/footer-copyright.pug				
 				include ../blocks/page-headers-footers/footer/footer.pug				
+				include ../blocks/page-headers-footers/site/site.pug				
 					

@@ -1,0 +1,66 @@
+extends ../assets/pug/layout/main.pug
+
+block content
+    .container
+        .search-room__inner
+            .search-room__menu
+                .search-room__arrival-date-margin  
+                    .text-field__header
+                        |даты пребывания в отеле
+                    button.text-field__input.text-field__input_dropdown 19 авг - 23 авг
+                        .arrow
+                            img(src="/assets/img/down-arrow.svg" width="12", alt="")
+
+                .search-room__guests-margin 
+        
+                    .text-field__header <!-- From "text-fields.pug" -->
+                        |гости
+
+                    .facilities-dropdown__hover
+                        button.text-field__input.text-field__input_dropdown.facilities-dropdown__btn 3 гостя
+                            .arrow
+                                img(src="/assets/img/down-arrow.svg" width="12", alt="")
+
+                        ul.facilities-dropdown__expand
+                            li.facilities-dropdown__rooms
+                                span Взрослые 
+                                .facilities-dropdown__count
+                                    button.facilities-dropdown__plus-minus -
+                                    | 2
+                                    button.facilities-dropdown__plus-minus +
+                            li.facilities-dropdown__rooms
+                                span Дети
+                                .facilities-dropdown__count
+                                    button.facilities-dropdown__plus-minus -
+                                    | 1
+                                    button.facilities-dropdown__plus-minus +
+                            li.facilities-dropdown__rooms
+                                span Младенцы
+                                .facilities-dropdown__count
+                                    button.facilities-dropdown__plus-minus.facilities-dropdown__plus-minus_disabled -
+                                    | 0
+                                    button.facilities-dropdown__plus-minus +
+                            .guests-dropdown__apply-cancel
+                                button.guests-dropdown__apply Применить    
+                                button.guests-dropdown__apply Очистить
+                .search-room__slider-margin
+                    .range-slider__header диапазон цены
+                        span 5 000₽ - 10 000₽
+                    .range-slider__price.search-room__range-margin
+                        .range-slider__range
+                            .range-slider__min
+                            .range-slider__max
+                    .search-room__cost-per-day Стоимость за сутки пребывания в номере
+                .search-room__checkbox-margin
+                    h2.checkbox-buttons__header Дополнительные условия
+                    ul.checkbox-buttons__items
+                        li
+                            input(class="checkbox-buttons__input" id="smoke1" type="checkbox")
+                            label(for="smoke1" class="checkbox-buttons__item") Можно курить
+                        li
+                            input(class="checkbox-buttons__input" id="pet1" type="checkbox")
+                            label(for="pet1" class="checkbox-buttons__item") Можно с питомцами
+                        li
+                            input(class="checkbox-buttons__input" id="invite1" type="checkbox")
+                            label(for="invite1" class="checkbox-buttons__item") Можно пригласить гостей (до 10 человек)
+            .search-room__rooms
