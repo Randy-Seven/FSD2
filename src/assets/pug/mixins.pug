@@ -3,3 +3,90 @@ mixin color-description(color,number)
 		span= color
 		|    !{number}
 
+mixin matched-room-5stars(photo, number, cost, feedbacks, rateName, star1Id, star2Id, star3Id, star4Id, star5Id)
+	.matched-room.matched-room__grid-margin
+		div(class= ''+photo).matched-room__hover
+			.matched-room__previous
+				button.matched-room__arrow
+			.matched-room__previous.matched-room__previous_next
+				button.matched-room__arrow
+		.matched-room__description 
+			.matched-room__inner
+				.matched-room__cost-wrapper
+					.room-search-data__lux-number.matched-room__font !{number} <span>люкс</span>
+					.room-search-data__lux-cost !{cost} <span>в сутки</span>
+				.matched-room__line
+				.matched-room__rate-wrapper
+					.rate-button
+						.rate-button__items
+							input(class="rate-button__input" id=''+star5Id type="radio" checked="checked" disabled="disabled" name=''+rateName value="5")
+							label(class="rate-button__item" for=''+star5Id)
+							input(class="rate-button__input" id=''+star4Id type="radio" disabled="disabled" name=''+rateName value="4")
+							label(class="rate-button__item" for=''+star4Id)
+							input(class="rate-button__input" id=''+star3Id type="radio" disabled="disabled" name=''+rateName value="3")
+							label(class="rate-button__item" for=''+star3Id)
+							input(class="rate-button__input" id=''+star2Id type="radio" disabled="disabled" name=''+rateName value="2")
+							label(class="rate-button__item" for=''+star2Id)
+							input(class="rate-button__input" id=''+star1Id type="radio" disabled="disabled" name=''+rateName value="1")
+							label(class="rate-button__item" for=''+star1Id)
+					.matched-room__feedbacks !{feedbacks} <span>Отзывов</span>
+
+mixin matched-room-4stars(photo, number, cost, feedbacks, rateName, star1Id, star2Id, star3Id, star4Id, star5Id)
+	.matched-room.matched-room__grid-margin
+		div(class= ''+photo).matched-room__hover
+			.matched-room__previous
+				button.matched-room__arrow
+			.matched-room__previous.matched-room__previous_next
+				button.matched-room__arrow
+		.matched-room__description 
+			.matched-room__inner
+				.matched-room__cost-wrapper
+					.room-search-data__lux-number.matched-room__font !{number} <span>люкс</span>
+					.room-search-data__lux-cost !{cost} <span>в сутки</span>
+				.matched-room__line
+				.matched-room__rate-wrapper
+					.rate-button
+						.rate-button__items
+							input(class="rate-button__input" id=''+star5Id type="radio" disabled="disabled" name=''+rateName value="5")
+							label(class="rate-button__item" for=''+star5Id)
+							input(class="rate-button__input" id=''+star4Id type="radio" checked="checked" disabled="disabled" name=''+rateName value="4")
+							label(class="rate-button__item" for=''+star4Id)
+							input(class="rate-button__input" id=''+star3Id type="radio" disabled="disabled" name=''+rateName value="3")
+							label(class="rate-button__item" for=''+star3Id)
+							input(class="rate-button__input" id=''+star2Id type="radio" disabled="disabled" name=''+rateName value="2")
+							label(class="rate-button__item" for=''+star2Id)
+							input(class="rate-button__input" id=''+star1Id type="radio" disabled="disabled" name=''+rateName value="1")
+							label(class="rate-button__item" for=''+star1Id)
+					.matched-room__feedbacks !{feedbacks} <span>Отзывов</span>
+
+mixin matched-room-3stars(photo, number, cost, feedbacks, rateName, star1Id, star2Id, star3Id, star4Id, star5Id)
+	.matched-room.matched-room__grid-margin
+		div(class= ''+photo).matched-room__hover
+			.matched-room__previous
+				button.matched-room__arrow
+			.matched-room__previous.matched-room__previous_next
+				button.matched-room__arrow
+		.matched-room__description 
+			.matched-room__inner
+				.matched-room__cost-wrapper
+					.room-search-data__lux-number.matched-room__font !{number} <span>люкс</span>
+					.room-search-data__lux-cost !{cost} <span>в сутки</span>
+				.matched-room__line
+				.matched-room__rate-wrapper
+					.rate-button
+						.rate-button__items
+							input(class="rate-button__input" id=''+star5Id type="radio" disabled="disabled" name=''+rateName value="5")
+							label(class="rate-button__item" for=''+star5Id)
+							input(class="rate-button__input" id=''+star4Id type="radio" disabled="disabled" name=''+rateName value="4")
+							label(class="rate-button__item" for=''+star4Id)
+							input(class="rate-button__input" id=''+star3Id type="radio" checked="checked" disabled="disabled" name=''+rateName value="3")
+							label(class="rate-button__item" for=''+star3Id)
+							input(class="rate-button__input" id=''+star2Id type="radio" disabled="disabled" name=''+rateName value="2")
+							label(class="rate-button__item" for=''+star2Id)
+							input(class="rate-button__input" id=''+star1Id type="radio" disabled="disabled" name=''+rateName value="1")
+							label(class="rate-button__item" for=''+star1Id)
+					.matched-room__feedbacks !{feedbacks} <span>Отзывов</span>
+
+
+
+

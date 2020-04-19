@@ -1,10 +1,17 @@
-.matched-room888 {
+.matched-room {
     width: 270px;
     height: 257px;
     background: #FFFFFF;
     box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
     border-radius: 4px;
-    margin-top: 40px;
+}
+
+.matched-room__margin {
+    margin-top: 2.11rem;
+}
+
+.matched-room__grid-margin {
+    margin-bottom: 1.05rem;
 }
 
 .matched-room888__photo {
@@ -15,19 +22,26 @@
     border-radius: 4px 4px 0 0;
 }
 
-.matched-room888__previous {
+.matched-room__previous {
     display: flex;
     align-items: center;
     width: 42px;
     background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%);
     border-radius: 4px 0 0 0;
+    opacity: 0;
+    transition: .5s;
     
     &_next {
         transform: matrix(-1, 0, 0, 1, 0, 0);
     }
 }
 
-.matched-room888__arrow {
+.matched-room__hover:hover .matched-room__previous {
+    opacity: 1;
+}
+
+
+.matched-room__arrow {
     cursor: pointer;
     width: 44px;
     height: 44px;
@@ -35,41 +49,41 @@
     transform: rotate(90deg);
 }
 
-.matched-room888__inner {
-    margin: 20px 17px 19px 20px; 
+.matched-room__inner {
+    margin: 1.05rem 0.89rem 1rem 1.05rem; 
 }
 
-.matched-room888__font {
-    font-size: 21px;
+.matched-room__font {
+    font-size: 1.11rem;
 }
 
-.matched-room888__cost-wrapper {
+.matched-room__cost-wrapper {
     position: relative;
-    margin-bottom: 12px;
+    margin-bottom: 0.63rem;
 }
 
-.matched-room888__line {
+.matched-room__line {
     height: 1px;
     background: rgba(31, 32, 65, 0.1);
-    margin-bottom: 8px;
+    margin-bottom: 0.42rem;
 }
 
-.matched-room888__rate-wrapper {
+.matched-room__rate-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.matched-room888__feedbacks {
+.matched-room__feedbacks {
     display: flex;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 0.74rem;
     color: rgba(31, 32, 65, 0.5);
-    padding-top: 2px;
+    padding-top: 0.11rem;
 
     span {
-        margin-left: 5px;
+        margin-left: 0.26rem;
         font-weight: normal;
     }
 }

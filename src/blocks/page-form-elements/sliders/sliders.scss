@@ -169,6 +169,10 @@
 /* PAGINATION
 ==============================*/
 
+.pagination {
+    width: 240px;
+}
+
 .pagination__header {
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
@@ -237,5 +241,6 @@
 .pagination__total {
     font-family: 'Montserrat', sans-serif;
     font-size: 0.74rem;
+    text-align: center;
     color: rgba(31, 32, 65, 0.75);
 }

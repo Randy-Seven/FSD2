@@ -5,36 +5,114 @@
 
 .search-room__menu {
     width: 266px;
-    margin-top: -10px;
+    margin-top: -0.53rem;
 }
 
 .search-room__rooms {
     width: 834px;
+    margin-top: -0.53rem;
 }
 
 .search-room__arrival-date-margin {
-    margin-bottom: 20.44px;
+    margin-bottom: 1.08rem;
 }
 
 .search-room__guests-margin {
-    margin-bottom: 30.44px;
+    margin-bottom: 1.6rem;
 }
 
 .search-room__range-margin {
-    margin-bottom: 13.56px;
+    margin-bottom: 0.71rem;
 }
 
 .search-room__cost-per-day {
     font-family: 'Montserrat', sans-serif;
-    font-size: 12px;
-    line-height: 14px;
+    font-size: 0.63rem;
+    line-height: 0.74rem;
     color: rgba(31, 32, 65, 0.5);
 }
 
 .search-room__slider-margin {
-    margin-bottom: 30px;
+    margin-bottom: 1.58rem;
 }
 
 .search-room__checkbox-margin {
-    margin-bottom: 30.88px;
+    margin-bottom: 1.63rem;
+}
+
+.search-room__rich-checkbox-margin {
+    margin-bottom: 1.6rem;
+}
+
+.search-room__facilities-margin {
+    margin-bottom: 1.58rem;
+}
+
+.rooms__header {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    font-size: 1.26rem;
+    line-height: 1.58rem;
+    color: #1F2041;
+    margin-bottom: 1.08rem;
+}
+
+.rooms__grid {
+    display: flex;
+    justify-content: space-between;
+}
+
+.rooms__column {
+    width: 270px;
+}
+
+.matched-room980__photo {
+    @include room-photo(url(/assets/img/room980.png))
+}
+
+.matched-room856__photo {
+    @include room-photo(url(/assets/img/room856.png))
+}
+
+.matched-room740__photo {
+    @include room-photo(url(/assets/img/room740.png))
+}
+
+.matched-room982__photo {
+    @include room-photo(url(/assets/img/room982.png))
+}
+
+.matched-room678__photo {
+    @include room-photo(url(/assets/img/room678.png))
+}
+
+.matched-room450__photo {
+    @include room-photo(url(/assets/img/room450.png))
+}
+
+.matched-room350__photo {
+    @include room-photo(url(/assets/img/room350.png))
+}
+
+.matched-room666__photo {
+    @include room-photo(url(/assets/img/room666.png))
+}
+
+.matched-room444__photo {
+    @include room-photo(url(/assets/img/room444.png))
+}
+
+.matched-room352__photo {
+    @include room-photo(url(/assets/img/room352.png))
+}
+
+.rooms__pagination {
+    width: 100%;
+    margin: 1.11rem 0 4rem 15.3rem;
+}
+
+.search-room__line {
+    height: 1px;
+    width: 100%;
+    background: rgba(31, 32, 65, 0.25);
 }

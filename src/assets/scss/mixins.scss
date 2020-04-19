@@ -13,3 +13,11 @@
   &::-moz-placeholder          { @content; }
   &:-ms-input-placeholder      { @content; }  
 }
+
+@mixin room-photo($photo) {
+  display: flex;
+  justify-content: space-between;
+  background: $photo;
+  height: 151px;
+  border-radius: 4px 4px 0 0;
+}
