@@ -3,11 +3,12 @@ mixin color-description(color,number)
 		span= color
 		|    !{number}
 
-mixin matched-room-5stars(photo, number, cost, feedbacks, rateName, star1Id, star2Id, star3Id, star4Id, star5Id)
+mixin matched-room-5stars(photo, link, number, cost, feedbacks, rateName, star1Id, star2Id, star3Id, star4Id, star5Id)
 	.matched-room.matched-room__grid-margin
 		div(class= ''+photo).matched-room__hover
 			.matched-room__previous
 				button.matched-room__arrow
+			a(class="matched-room__link" href=""+link)
 			.matched-room__previous.matched-room__previous_next
 				button.matched-room__arrow
 		.matched-room__description 
@@ -31,11 +32,12 @@ mixin matched-room-5stars(photo, number, cost, feedbacks, rateName, star1Id, sta
 							label(class="rate-button__item" for=''+star1Id)
 					.matched-room__feedbacks !{feedbacks} <span>Отзывов</span>
 
-mixin matched-room-4stars(photo, number, cost, feedbacks, rateName, star1Id, star2Id, star3Id, star4Id, star5Id)
+mixin matched-room-4stars(photo, link, number, cost, feedbacks, rateName, star1Id, star2Id, star3Id, star4Id, star5Id)
 	.matched-room.matched-room__grid-margin
 		div(class= ''+photo).matched-room__hover
 			.matched-room__previous
 				button.matched-room__arrow
+			a(class="matched-room__link" href=""+link)
 			.matched-room__previous.matched-room__previous_next
 				button.matched-room__arrow
 		.matched-room__description 
@@ -59,11 +61,12 @@ mixin matched-room-4stars(photo, number, cost, feedbacks, rateName, star1Id, sta
 							label(class="rate-button__item" for=''+star1Id)
 					.matched-room__feedbacks !{feedbacks} <span>Отзывов</span>
 
-mixin matched-room-3stars(photo, number, cost, feedbacks, rateName, star1Id, star2Id, star3Id, star4Id, star5Id)
+mixin matched-room-3stars(photo, link, number, cost, feedbacks, rateName, star1Id, star2Id, star3Id, star4Id, star5Id)
 	.matched-room.matched-room__grid-margin
 		div(class= ''+photo).matched-room__hover
 			.matched-room__previous
 				button.matched-room__arrow
+			a(class="matched-room__link" href=""+link)
 			.matched-room__previous.matched-room__previous_next
 				button.matched-room__arrow
 		.matched-room__description 

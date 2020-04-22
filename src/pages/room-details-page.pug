@@ -1,0 +1,81 @@
+extends ../assets/pug/layout/main.pug
+
+block content
+    .room-details__images.clearfix
+        .room-details__image1
+        .room-details__image2
+        .room-details__image3
+    .container
+        .room-details__inner
+            .room-details__first-column
+                .room-details__room-information
+                    .room-details__information-header Сведения о номере
+                    ul.room-information__conviniences
+                        li.room-information__item.room-information__item_smile  
+                            h2 Комфорт
+                            p  Шумопоглощающие стены
+                        li.room-information__item  
+                            h2 Удобство
+                            p  Окно в каждой из спален
+                        li.room-information__item.room-information__item_fire  
+                            h2 Уют
+                            p  Номер оснащен камином
+                .room-details__room-impressions
+                    .room-details__room-impressions-header Впечатления от номера
+                    .room-details__rating
+                        .room-details__diagram
+                            .room-details__perfect
+                            .room-details__alright
+                            .room-details__good
+                            .room-details__voices 260 <span>голосов</span>
+                        ul.room-details__rating-value
+                            li Великолепно
+                            li Хорошо
+                            li Удовлетворительно
+                            li Разочарован
+
+                .room-details__feedbacks
+                    .room-details__feedbacks-header 
+                        p Отзывы посетителей номера
+                        span 2 отзыва
+
+                    .room-information__feedback.room-details__feedback-margin
+                        .room-information__user
+                            .room-information__user-name Мурад Сарафанов
+                            p 5 дней назад
+                        .room-information__comment Великолепный матрас на кровати в основной спальне! 
+                            | А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. 
+                            | Выкрикивал комплименты повару — никто не жаловался из соседей.
+                            .like-button.room-information__like
+                                input(class="like-button__input" id="comment-like1" type="checkbox" name="like1")
+                                label(for="comment-like1" class="like-button__item room-information__like-item")
+
+                    .room-information__feedback
+                        .room-information__user1
+                            .room-information__user-name Патрисия Стёклышкова
+                            p Неделю назад
+                        .room-information__comment Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать,
+                            |  каждый день новое блюдо и десерт как комплимент  
+                            .like-button.room-information__like
+                                input(class="like-button__input" id="comment-like2" type="checkbox" name="like2")
+                                label(for="comment-like2" class="like-button__item room-information__like-item room-details__like")
+                .room-details__rules
+                    .room-details__bullet-list
+                        .room-details__bullet-list-header Правила
+                        ul
+                            li.bullet-list__item Нельзя с питомцами
+                            li.bullet-list__item Без вечеринок и мероприятий
+                            li.bullet-list__item
+                                | Время прибытия — после 13:00, 
+                                | а выезд до 12:00
+                        
+                    .room-details__cancel
+                        .room-details__cancel-header Отмена
+                        p Бесплатная отмена в течение 48 ч. После 
+                        | этого при отмене не позднее чем за 5 дн. до 
+                        | прибытия вы получите полный возврат 
+                        | за вычетом сбора за услуги.
+
+            .room-details__second-column
+                include ../blocks/page-cards/room-search-data/room-search-data.pug
+    .search-room__line
