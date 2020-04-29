@@ -1,5 +1,7 @@
 // JS
 import './js/'
+import './blocks/page-form-elements/active-dropdowns/js/active-dropdowns.js'
+import './blocks/page-form-elements/checkbox-lists/js/checkbox-lists.js'
 
 // SCSS
 import './main.scss'

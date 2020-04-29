@@ -16,7 +16,7 @@ block content
                     .text-field__header <!-- From "text-fields.pug" -->
                         |гости
 
-                    .facilities-dropdown__hover
+                    div(class="facilities-dropdown__menu-js")
                         button.text-field__input.text-field__input_dropdown.facilities-dropdown__btn 3 гостя
                             .arrow
                                 img(src="/assets/img/down-arrow.svg" width="12", alt="")
@@ -83,7 +83,7 @@ block content
                     .text-field__header <!-- From "text-fields.pug" -->
                         |удобства номера 
 
-                    .facilities-dropdown__hover
+                    div(class="facilities-dropdown__menu-js")
                         button.text-field__input.text-field__input_dropdown.facilities-dropdown__btn 2 спальни, 2 кровати...
                             .arrow
                                 img(src="/assets/img/down-arrow.svg" width="12", alt="")
@@ -109,7 +109,7 @@ block content
                                     button.facilities-dropdown__plus-minus +
 
                 .search-form__additionals
-                    .additionals-checkbox
+                    .additionals-checkbox.additionals-checkbox-js
                         button.text-field__input.text-field__input_dropdown.additionals-checkbox__btn EXPANDABLE CHECKBOX LIST <!-- From "text-fields.pug" -->
                             .arrow.arrow_up
                                 img(src="/assets/img/down-arrow.svg" width="12", alt="")

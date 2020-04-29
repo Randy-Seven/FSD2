@@ -21,7 +21,8 @@
     border: none;
     padding-left: 0;
 
-    &:hover {
+    &:hover,
+    &:focus {
         border: none;
     }
 }
@@ -37,11 +38,11 @@
     display: none;
 }
 
-.additionals-checkbox:hover .additionals-checkbox__expand {
+.additionals-checkbox__open-js .additionals-checkbox__expand {
     display: block;
-} 
+}
 
-.additionals-checkbox:hover .arrow_up {
+.additionals-checkbox__open-js .arrow_up {
     transform: rotate(-180deg);
     transition: .2s;
 }

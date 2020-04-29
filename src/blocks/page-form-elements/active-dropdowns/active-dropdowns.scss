@@ -16,7 +16,7 @@
 
 .facilities-dropdown__expand {
     position: absolute;
-    z-index: 1;
+    z-index: 3;
     width: 266px;
     border: 1px solid rgba(31, 32, 65, 0.5);
     border-top: 0px;
@@ -30,11 +30,11 @@
     background: white;
 }
 
-.facilities-dropdown__hover:hover  .facilities-dropdown__expand {
+.facilities-dropdown__open-js  .facilities-dropdown__expand {
     display: block;
 }
 
-.facilities-dropdown__hover:hover  .facilities-dropdown__btn {
+.facilities-dropdown__open-js  .facilities-dropdown__btn {
     border: 1px solid rgba(31, 32, 65, 0.5);
     border-radius: 4px 4px 0px 0px;
 }
