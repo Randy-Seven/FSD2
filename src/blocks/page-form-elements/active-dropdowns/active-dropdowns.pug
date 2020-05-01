@@ -7,7 +7,7 @@
             <span class="text-field__status">Default</span> 
 
         div(class="facilities-dropdown__menu-js")
-            button.text-field__input.text-field__input_dropdown.facilities-dropdown__btn 2 спальни, 2 кровати...
+            button.text-field__input.text-field__input_dropdown.facilities-dropdown__btn.facilities-dropdown__input-js 2 спальни, 2 кровати...
                 .arrow
                     img(src="/assets/img/down-arrow.svg" width="12", alt="")
 
@@ -15,21 +15,21 @@
                 li.facilities-dropdown__rooms
                     span Спальни 
                     .facilities-dropdown__count
-                        button.facilities-dropdown__plus-minus -
-                        | 2
-                        button.facilities-dropdown__plus-minus +
+                        button.facilities-dropdown__plus-minus.facilities-dropdown__minus-js -
+                        p.facilities-dropdown__num-js 2
+                        button.facilities-dropdown__plus-minus.facilities-dropdown__plus-js +
                 li.facilities-dropdown__rooms
                     span Кровати
                     .facilities-dropdown__count
-                        button.facilities-dropdown__plus-minus -
-                        | 2
-                        button.facilities-dropdown__plus-minus +
+                        button.facilities-dropdown__plus-minus.facilities-dropdown__minus-js -
+                        p.facilities-dropdown__num-js 2
+                        button.facilities-dropdown__plus-minus.facilities-dropdown__plus-js +
                 li.facilities-dropdown__rooms
                     span Ванные комнаты
                     .facilities-dropdown__count
-                        button.facilities-dropdown__plus-minus.facilities-dropdown__plus-minus_disabled -
-                        | 0
-                        button.facilities-dropdown__plus-minus +
+                        button.facilities-dropdown__plus-minus.facilities-dropdown__plus-minus_disabled.facilities-dropdown__minus-js -
+                        p.facilities-dropdown__num-js 0
+                        button.facilities-dropdown__plus-minus.facilities-dropdown__plus-js +
 
     .guests-dropdown 
     
