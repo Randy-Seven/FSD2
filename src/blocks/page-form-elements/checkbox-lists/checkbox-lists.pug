@@ -1,36 +1,6 @@
 .checkbox-lists 
 
-    div(class = "additionals-checkbox additionals-checkbox-js") 
-
-        button.text-field__input.text-field__input_dropdown.additionals-checkbox__btn EXPANDABLE CHECKBOX LIST <!-- From "text-fields.pug" -->
-            .arrow.arrow_up
-                img(src="/assets/img/down-arrow.svg" width="12", alt="")
-
-        ul.checkbox-buttons__items.additionals-checkbox__expand  <!-- From "buttons.pug" -->
-            li
-                input(class="checkbox-buttons__input" id="additional1" type="checkbox")
-                label(for="additional1" class="checkbox-buttons__item") Завтрак
-            li
-                input(class="checkbox-buttons__input" id="additional2" type="checkbox")
-                label(for="additional2" class="checkbox-buttons__item") Письменный стол
-            li
-                input(class="checkbox-buttons__input" id="additional3" type="checkbox")
-                label(for="additional3" class="checkbox-buttons__item") Стул для кормления
-            li
-                input(class="checkbox-buttons__input" id="additional4" type="checkbox")
-                label(for="additional4" class="checkbox-buttons__item") Кроватка
-            li
-                input(class="checkbox-buttons__input" id="additional5" type="checkbox")
-                label(for="additional5" class="checkbox-buttons__item") Телевизор
-            li
-                input(class="checkbox-buttons__input" id="additional6" type="checkbox")
-                label(for="additional6" class="checkbox-buttons__item") Шампунь
-            li
-                input(class="checkbox-buttons__input" id="additional7" type="checkbox")
-                label(for="additional7" class="checkbox-buttons__item") Телевизор
-            li
-                input(class="checkbox-buttons__input" id="additional8" type="checkbox")
-                label(for="additional8" class="checkbox-buttons__item") Шампунь
+    include additionals-checkbox.pug
 
     .rich-checkbox
 

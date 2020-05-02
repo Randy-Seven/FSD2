@@ -18,8 +18,6 @@ block content
 
                     div(class="facilities-dropdown__menu-js")
                         button.text-field__input.text-field__input_dropdown.facilities-dropdown__btn 3 гостя
-                            .arrow
-                                img(src="/assets/img/down-arrow.svg" width="12", alt="")
 
                         ul.facilities-dropdown__expand
                             li.facilities-dropdown__rooms
@@ -84,61 +82,30 @@ block content
                         |удобства номера 
 
                     div(class="facilities-dropdown__menu-js")
-                        button.text-field__input.text-field__input_dropdown.facilities-dropdown__btn 2 спальни, 2 кровати...
-                            .arrow
-                                img(src="/assets/img/down-arrow.svg" width="12", alt="")
+                        button.text-field__input.text-field__input_dropdown.facilities-dropdown__btn.facilities-dropdown__input-js 2 спальни, 2 кровати...
 
                         ul.facilities-dropdown__expand
                             li.facilities-dropdown__rooms
                                 span Спальни 
                                 .facilities-dropdown__count
-                                    button.facilities-dropdown__plus-minus -
-                                    | 2
-                                    button.facilities-dropdown__plus-minus +
+                                    button.facilities-dropdown__plus-minus.facilities-dropdown__minus-js -
+                                    p.facilities-dropdown__num-js 2
+                                    button.facilities-dropdown__plus-minus.facilities-dropdown__plus-js +
                             li.facilities-dropdown__rooms
                                 span Кровати
                                 .facilities-dropdown__count
-                                    button.facilities-dropdown__plus-minus -
-                                    | 2
-                                    button.facilities-dropdown__plus-minus +
+                                    button.facilities-dropdown__plus-minus.facilities-dropdown__minus-js -
+                                    p.facilities-dropdown__num-js 2
+                                    button.facilities-dropdown__plus-minus.facilities-dropdown__plus-js +
                             li.facilities-dropdown__rooms
                                 span Ванные комнаты
                                 .facilities-dropdown__count
-                                    button.facilities-dropdown__plus-minus.facilities-dropdown__plus-minus_disabled -
-                                    | 0
-                                    button.facilities-dropdown__plus-minus +
+                                    button.facilities-dropdown__plus-minus.facilities-dropdown__plus-minus_disabled.facilities-dropdown__minus-js -
+                                    p.facilities-dropdown__num-js 0
+                                    button.facilities-dropdown__plus-minus.facilities-dropdown__plus-js +
 
                 .search-form__additionals
-                    .additionals-checkbox.additionals-checkbox-js
-                        button.text-field__input.text-field__input_dropdown.additionals-checkbox__btn EXPANDABLE CHECKBOX LIST <!-- From "text-fields.pug" -->
-                            .arrow.arrow_up
-                                img(src="/assets/img/down-arrow.svg" width="12", alt="")
-
-                        ul.checkbox-buttons__items.additionals-checkbox__expand  <!-- From "buttons.pug" -->
-                            li
-                                input(class="checkbox-buttons__input" id="additional11" type="checkbox")
-                                label(for="additional11" class="checkbox-buttons__item") Завтрак
-                            li
-                                input(class="checkbox-buttons__input" id="additional21" type="checkbox")
-                                label(for="additional21" class="checkbox-buttons__item") Письменный стол
-                            li
-                                input(class="checkbox-buttons__input" id="additional31" type="checkbox")
-                                label(for="additional31" class="checkbox-buttons__item") Стул для кормления
-                            li
-                                input(class="checkbox-buttons__input" id="additional41" type="checkbox")
-                                label(for="additional41" class="checkbox-buttons__item") Кроватка
-                            li
-                                input(class="checkbox-buttons__input" id="additional51" type="checkbox")
-                                label(for="additional51" class="checkbox-buttons__item") Телевизор
-                            li
-                                input(class="checkbox-buttons__input" id="additional61" type="checkbox")
-                                label(for="additional61" class="checkbox-buttons__item") Шампунь
-                            li
-                                input(class="checkbox-buttons__input" id="additional71" type="checkbox")
-                                label(for="additional71" class="checkbox-buttons__item") Телевизор
-                            li
-                                input(class="checkbox-buttons__input" id="additional81" type="checkbox")
-                                label(for="additional81" class="checkbox-buttons__item") Шампунь
+                    include ../blocks/page-form-elements/checkbox-lists/additionals-checkbox.pug
 
             .search-room__rooms <!-- Rooms-->
                 .rooms__header Номера, которые мы для вас подобрали
