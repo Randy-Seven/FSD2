@@ -1,5 +1,7 @@
 // Делаю дропдауны кликабельными
 
+// alert(window.location.toString().indexOf('landing-page.html'));
+
 let facilitiesDropdownMenu = document.querySelectorAll('.facilities-dropdown__menu-js')
 let facilitiesDropdownBtn = document.querySelectorAll('.facilities-dropdown__btn')
 
@@ -173,6 +175,7 @@ let adultWordForm = "взрослые";
 let childWordForm = "дети";
 let babyWordForm = "младенцы";
 let guestsDropdownClearButton = document.querySelector('.guests-dropdown__cancel-js') 
+let guestsDropdownApplyButton = document.querySelector('.guests-dropdown__apply-js') 
 
 // Склонения слов
 
@@ -253,7 +256,15 @@ for(let i = 0; i < guestsDropdownNum.length; i++) {
 
         if (guestsDropdownNum[i].innerHTML == 1) {
             guestsDropdownMinus[i].classList.remove("facilities-dropdown__plus-minus_disabled");
-        }    
+        }  
+
+// Скрываю кнопку "Очистить" если не выбраны удобства
+
+        if (guestsDropdownInput.innerHTML != 'Сколько гостей') {
+            guestsDropdownClearButton.hidden = false
+        } else {
+            guestsDropdownClearButton.hidden = true
+        }
     }
 
 // При клике на минус
@@ -316,6 +327,14 @@ for(let i = 0; i < guestsDropdownNum.length; i++) {
         if (guestsDropdownNum[i].innerHTML == 0) {
             guestsDropdownMinus[i].classList.add("facilities-dropdown__plus-minus_disabled");
         }
+        
+// Скрываю кнопку "Очистить" если не выбраны удобства
+
+        if (guestsDropdownInput.innerHTML != 'Сколько гостей') {
+            guestsDropdownClearButton.hidden = false
+        } else {
+            guestsDropdownClearButton.hidden = true
+        }
     }
 }
 
@@ -329,4 +348,36 @@ guestsDropdownClearButton.onclick = function() {
         guestsDropdownMinus[i].classList.add("facilities-dropdown__plus-minus_disabled");
     }
     guestsDropdownInput.innerHTML = 'Сколько гостей'
+    guestsDropdownClearButton.hidden = true
 }
+
+// Кнопка "Применить"
+
+guestsDropdownApplyButton.onclick = function() {
+    for (i = 0; i < facilitiesDropdownMenu.length; i++) {
+        facilitiesDropdownMenu[i].classList.remove('facilities-dropdown__open-js');
+    }
+}
+
+// Делаю дропдауны закрытыми при клике мимо них
+
+for (i = 0; i < facilitiesDropdownMenu.length; i++) {
+    facilitiesDropdownMenu[i].addEventListener('click', e => {
+        e.stopPropagation();
+    });
+}
+
+
+document.addEventListener('click', e => {
+    for (i = 0; i < facilitiesDropdownMenu.length; i++) {
+        let target = e.target;
+        let itsDropdown = target == facilitiesDropdownMenu[i];
+        let dropdownIsOpened = facilitiesDropdownMenu[i].classList.contains('facilities-dropdown__open-js');
+
+        if (!itsDropdown && dropdownIsOpened) {
+                facilitiesDropdownMenu[i].classList.remove('facilities-dropdown__open-js');
+            };
+    }
+}) 
+
+
