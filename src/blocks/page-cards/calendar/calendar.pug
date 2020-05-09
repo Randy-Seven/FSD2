@@ -2,57 +2,58 @@
     .calendar__inner    
         h1.calendar__month
             button.calendar__next-month.calendar__next-month_previous
-            | Август 2019
-            button.calendar__next-month
-        table.calendar__week-days
-            tr
-                th Пн
-                th Вт
-                th Ср
-                th Чт
-                th Пт
-                th Сб
-                th Вс
-            tr
-                td.calendar__disabled 29
-                td.calendar__disabled 30
-                td.calendar__disabled 31
-                td 1
-                td 2
-                td 3
-                td 4
-            tr
-                td 5
-                td 6
-                td 7
-                td.calendar__current 8
-                td 9
-                td 10
-                td 11
-            tr
-                td 12
-                td 13
-                td 14
-                td 15
-                td 16
-                td 17
-                td 18
-            tr
-                td.calendar__active 19
-                td 20
-                td 21
-                td 22
-                td.calendar__active 23
-                td 24
-                td 25
-            tr
-                td 26
-                td 27
-                td 28
-                td 29
-                td 30
-                td 31
-                td.calendar__disabled 1
+            p.calendar__header-month Август 2019
+            button.calendar__next-month.calendar__next-month_next
+        #calendar
+            table.calendar__week-days
+                tr
+                    th Пн
+                    th Вт
+                    th Ср
+                    th Чт
+                    th Пт
+                    th Сб
+                    th Вс
+                tr
+                    td.calendar__disabled 29
+                    td.calendar__disabled 30
+                    td.calendar__disabled 31
+                    td 1
+                    td 2
+                    td 3
+                    td 4
+                tr
+                    td 5
+                    td 6
+                    td 7
+                    td.calendar__current 8
+                    td 9
+                    td 10
+                    td 11
+                tr
+                    td 12
+                    td 13
+                    td 14
+                    td 15
+                    td 16
+                    td 17
+                    td 18
+                tr
+                    td.calendar__active 19
+                    td 20
+                    td 21
+                    td 22
+                    td.calendar__active 23
+                    td 24
+                    td 25
+                tr
+                    td 26
+                    td 27
+                    td 28
+                    td 29
+                    td 30
+                    td 31
+                    td.calendar__disabled 1 
         .calendar__apply
             button.guests-dropdown__apply Применить <!-- From active-dropdowns.pug --> 
             button.guests-dropdown__apply Очистить
