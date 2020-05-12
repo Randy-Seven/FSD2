@@ -15,10 +15,11 @@ function createCalendar(year, month) {
         'Декабрь',
     ]
  
-    let mon = month - 1; // месяцы в JS идут от 0 до 11, а не от 1 до 12
+    let mon = month - 1;
     let d = new Date(year, mon);
-    let previousMonthDays = new Date(year, mon - 1)
-    let nextMonthDays = new Date(year, mon + 1)
+    let nextMonthFirstDay = 0;
+    let previousMonthLastDay = getLastDayOfMonth(year, mon - 1);
+    let today = new Date();
 
     // Меняем месяц и год в заголовке календаря
     let headerMonth = document.querySelector('.calendar__header-month');
@@ -46,42 +47,61 @@ function createCalendar(year, month) {
 
     let table = '<table class=\'calendar__week-days\'><tr><th>Пн</th><th>Вт</th><th>Ср</th><th>Чт</th><th>Пт</th><th>Сб</th><th>Вс</th></tr><tr>';
     
-    // пробелы для первого ряда
+    // Последние числа прошлого месяца
     // с понедельника до первого дня месяца
-    // * * * 1  2  3  4
+    // 29 30 31 1  2  3  4
+    previousMonthLastDay -= getDay(d) - 1
     for (let i = 0; i < getDay(d); i++) {
-      table += '<td></td>';
+      table += '<td class = \'calendar__disabled\'>' + previousMonthLastDay + '</td>';
+      previousMonthLastDay += 1;
     }
 
     // <td> ячейки календаря с датами
     while (d.getMonth() == mon) {
-      table += '<td>' + d.getDate() + '</td>';
+      // Выделяем текущую дату
+      if (d.getDate() == today.getDate() && d.getFullYear() == today.getFullYear() && today.getMonth() == mon) {
+        table += '<td class = \'calendar__current\'>' + today.getDate() + '</td>'
+      } else {
+        table += '<td>' + d.getDate() + '</td>';
+      }
 
-      if (getDay(d) % 7 == 6) { // вс, последний день - перевод строки
+      if (getDay(d) % 7 == 6) { // Вс, последний день - перевод строки
         table += '</tr><tr>';
       }
 
       d.setDate(d.getDate() + 1);
     }
 
-    // добить таблицу пустыми ячейками, если нужно
-    // 29 30 31 * * * *
+    // Добить таблицу числами следующего месяца, если нужно
+    // 29 30 31 1 2 3 4
     if (getDay(d) != 0) {
       for (let i = getDay(d); i < 7; i++) {
-        table += '<td></td>';
+        nextMonthFirstDay += 1
+        table += '<td class = \'calendar__disabled\'>' + nextMonthFirstDay + '</td>';
       }
     }
 
-    // закрыть таблицу
+    // Закрыть таблицу
     table += '</tr></table>';
 
-    calendar.innerHTML = table;
+    // Исправляем конфликт с id
+    if (window.location.toString().indexOf('landing-page.html') <= 0) {
+      calendar.innerHTML = table;
+    }
+    
+    dropCalendar.innerHTML = table;
   }
 
-  function getDay(date) { // получить номер дня недели, от 0 (пн) до 6 (вс)
+  // Функция, возвращающая последнее число месяца 
+  function getLastDayOfMonth(year, month) {
+    let date = new Date(year, month + 1, 0);
+    return date.getDate();
+  }
+
+  function getDay(date) { // Получить номер дня недели, от 0 (пн) до 6 (вс)
     let day = date.getDay();
-    if (day == 0) day = 7; // сделать воскресенье (0) последним днем
+    if (day == 0) day = 7; // Сделать воскресенье (0) последним днем
     return day - 1;
   }
 
-createCalendar(2020, 12);
+createCalendar(2020, 5);

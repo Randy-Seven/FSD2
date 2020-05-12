@@ -26,13 +26,21 @@
 }
 
 .room-search-form__arrival-wrapper {
+  position: relative;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   margin-bottom: 1.11rem; 
 }
 
 .room-search-form__arrival {
   min-width: 7.89rem;
+}
+
+.drop-calendar {
+  position: absolute;
+  z-index: 100;
+  top: 70px;
 }
 
 .room-search-form__margin {
