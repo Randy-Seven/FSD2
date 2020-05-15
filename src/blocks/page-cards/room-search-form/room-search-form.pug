@@ -5,15 +5,11 @@
 			.room-search-form__arrival
 				.text-field__header  <!-- From "text-fields.pug" -->
 					|прибытие
-				button.text-field__input.text-field__input_dropdown ДД.ММ.ГГГГ
-					.arrow
-						img(src="/assets/img/down-arrow.svg" width="12", alt="")
+				button.text-field__input.text-field__input_dropdown.room-search-form__arrival-button ДД.ММ.ГГГГ
 			.room-search-form__arrival
 				.text-field__header
 					|выезд
-				button.text-field__input.text-field__input_dropdown ДД.ММ.ГГГГ
-					.arrow
-						img(src="/assets/img/down-arrow.svg" width="12", alt="")
+				button.text-field__input.text-field__input_dropdown.room-search-form__checkout-button ДД.ММ.ГГГГ
 			.calendar.drop-calendar
 				.calendar__inner    
 					h1.calendar__month
@@ -22,8 +18,8 @@
 						button.calendar__next-month.calendar__next-month_next
 					#dropCalendar
 					.calendar__apply
-						button.guests-dropdown__apply Применить <!-- From active-dropdowns.pug --> 
-						button.guests-dropdown__apply Очистить
+						button.guests-dropdown__apply.calendar__apply-js Применить <!-- From active-dropdowns.pug --> 
+						button.guests-dropdown__apply.calendar__clear-js Очистить
 		.room-search-form__margin
 			include ../../page-form-elements/active-dropdowns/guests-dropdown.pug   
 

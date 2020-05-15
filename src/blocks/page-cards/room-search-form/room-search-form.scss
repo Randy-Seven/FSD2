@@ -37,6 +37,17 @@
   min-width: 7.89rem;
 }
 
+.room-search-form__arrival-button::after,
+.room-search-form__checkout-button::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  width: 44px;
+  height: 44px;
+  background: url(/assets/img/down-arrow.svg) no-repeat 16px 16px;
+}
+
 .drop-calendar {
   position: absolute;
   z-index: 100;

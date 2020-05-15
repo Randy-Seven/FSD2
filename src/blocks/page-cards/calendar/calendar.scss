@@ -75,17 +75,31 @@
 
 .calendar__disabled {
     color: rgba(31, 32, 65, 0.25);
+    pointer-events: none;
 }
 
-.calendar__current {
-    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+.calendar__current,
+.calendar__current:hover {
+    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%) !important;
+    opacity: 1 !important;
     border-radius: 50%;
     font-weight: bold;
     color: #FFFFFF;
 }
 
-.calendar__active {
-    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+.calendar__active,
+.calendar__active:hover {
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%) !important;
+    opacity: 1 !important;
+    border-radius: 50%;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+.calendar__viezd,
+.calendar__viezd:hover {
+    background: red !important;
+    opacity: 1 !important;
     border-radius: 50%;
     font-weight: bold;
     color: #FFFFFF;

@@ -1,3 +1,5 @@
+let today = new Date();
+
 function createCalendar(year, month) {
 
     let months = [
@@ -19,7 +21,6 @@ function createCalendar(year, month) {
     let d = new Date(year, mon);
     let nextMonthFirstDay = 0;
     let previousMonthLastDay = getLastDayOfMonth(year, mon - 1);
-    let today = new Date();
 
     // Меняем месяц и год в заголовке календаря
     let headerMonth = document.querySelector('.calendar__header-month');
@@ -43,6 +44,15 @@ function createCalendar(year, month) {
         } else {
             createCalendar(year, month - 1);
         }
+    }
+
+    // Прячем стрелку влево если на календаре текущий год и месяц
+    if ((year == today.getFullYear()) && (month == today.getMonth() + 1)) {
+      previousMonth.style.opacity = '0';
+      previousMonth.style.pointerEvents = 'none';
+    } else {
+      previousMonth.style.opacity = '1';
+      previousMonth.style.pointerEvents = 'auto';
     }
 
     let table = '<table class=\'calendar__week-days\'><tr><th>Пн</th><th>Вт</th><th>Ср</th><th>Чт</th><th>Пт</th><th>Сб</th><th>Вс</th></tr><tr>';
@@ -90,7 +100,16 @@ function createCalendar(year, month) {
     }
     
     dropCalendar.innerHTML = table;
-  }
+
+    let calendarDays = document.querySelectorAll('#dropCalendar td');
+
+    // Делаем недоступными дни до текущей даты
+    for (let i = 1; i < calendarDays.length; i++) {
+      if (+calendarDays[i].innerHTML < +today.getDate() && (year == today.getFullYear()) && (month == today.getMonth() + 1)) {
+          calendarDays[i].classList.add('calendar__disabled')
+      }
+    }
+}
 
   // Функция, возвращающая последнее число месяца 
   function getLastDayOfMonth(year, month) {
@@ -104,4 +123,4 @@ function createCalendar(year, month) {
     return day - 1;
   }
 
-createCalendar(2020, 5);
+createCalendar(today.getFullYear(), today.getMonth() + 1);
