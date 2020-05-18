@@ -9,7 +9,7 @@
 }
 
 .calendar__inner {
-    margin: 1.05rem;
+    margin: 1.03rem;
 }
 
 .calendar__month {
@@ -87,8 +87,11 @@
     color: #FFFFFF;
 }
 
-.calendar__active,
-.calendar__active:hover {
+.calendar__arrival,
+.calendar__checkout,
+.calendar__arrival:hover
+.calendar__checkout:hover {
+    position: relative;
     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%) !important;
     opacity: 1 !important;
     border-radius: 50%;
@@ -96,13 +99,43 @@
     color: #FFFFFF;
 }
 
-.calendar__viezd,
-.calendar__viezd:hover {
-    background: red !important;
-    opacity: 1 !important;
-    border-radius: 50%;
-    font-weight: bold;
-    color: #FFFFFF;
+.calendar__arrival::after {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    content: '';
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    opacity: 0.25;
+}
+
+.calendar__checkout::after {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    content: '';
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    opacity: 0.25;
+}
+
+#dropCalendar td {
+    position: relative;
+}
+
+.calendar__dayInRange::after {
+    position: absolute;
+    z-index: -1;
+    top: 0; right: 0; left: 0; bottom: 0;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    opacity: 0.25; 
 }
 
 

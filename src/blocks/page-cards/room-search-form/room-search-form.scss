@@ -48,6 +48,11 @@
   background: url(/assets/img/down-arrow.svg) no-repeat 16px 16px;
 }
 
+.room-search-form__checkout-button:focus,
+.room-search-form__arrival-button:focus {
+  border-color: rgba(31, 32, 65, 0.25);
+}
+
 .drop-calendar {
   position: absolute;
   z-index: 100;
