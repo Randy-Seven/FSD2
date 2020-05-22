@@ -1,4 +1,5 @@
 let today = new Date();
+
 let months = [
   'Январь',
   'Февраль',
@@ -20,6 +21,9 @@ function createCalendar(year, month) {
   let d = new Date(year, mon);
   let nextMonthFirstDay = 0;
   let previousMonthLastDay = getLastDayOfMonth(year, mon - 1);
+
+  let roomSearchArrivalButton = document.querySelector('.room-search-form__arrival-button')
+  let roomSearchCheckoutButton = document.querySelector('.room-search-form__checkout-button')
 
   // Меняем месяц и год в заголовке календаря
   let headerMonth = document.querySelector('.calendar__header-month');
@@ -93,7 +97,7 @@ function createCalendar(year, month) {
   // Закрыть таблицу
   table += '</tr></table>';
 
-  // Исправляем конфликт с id
+  // Исправляем конфликты с id
   if (window.location.toString().indexOf('landing-page.html') <= 0) {
     calendar.innerHTML = table;
   }
@@ -103,7 +107,7 @@ function createCalendar(year, month) {
   let calendarDays = document.querySelectorAll('#dropCalendar td');
 
   // Делаем недоступными дни до текущей даты
-  for (let i = 1; i < calendarDays.length; i++) {
+  for (let i = 0; i < calendarDays.length; i++) {
     if (+calendarDays[i].innerHTML < +today.getDate() && (year == today.getFullYear()) && (month == today.getMonth() + 1)) {
         calendarDays[i].classList.add('calendar__disabled')
     }
@@ -116,7 +120,75 @@ function createCalendar(year, month) {
     monthAndYear = month + '.' + year
   }
 
-  //  Возвращаем месяц и год для инициализации инпутов
+  // При переклчении месяцев запоминаем дни прибытия и выезда
+  for (let i = 0; i < calendarDays.length; i++) {
+    if ((+roomSearchArrivalButton.innerHTML.slice(0, 2) == +calendarDays[i].innerHTML) && (roomSearchArrivalButton.innerHTML.slice(3) == monthAndYear) && (!calendarDays[i].classList.contains('calendar__disabled'))) {
+      calendarDays[i].classList.add('calendar__arrivalWithoutAfter')
+    }
+
+    if ((+roomSearchCheckoutButton.innerHTML.slice(0, 2) == +calendarDays[i].innerHTML) && (roomSearchCheckoutButton.innerHTML.slice(3) == monthAndYear) && (!calendarDays[i].classList.contains('calendar__disabled'))) {
+      calendarDays[i].classList.add('calendar__checkout')
+    }
+  }
+
+
+  // Отрабатываем диапазон дней при переключении месяцев
+  if ((roomSearchArrivalButton.innerHTML !== 'ДД.ММ.ГГГГ') && (roomSearchCheckoutButton.innerHTML !== 'ДД.ММ.ГГГГ')) { 
+    for (let i = 0; i < calendarDays.length; i++) {
+      if (calendarDays[i].classList.contains('calendar__arrivalWithoutAfter')) {
+        calendarDays[i].classList.remove('calendar__arrivalWithoutAfter')
+        calendarDays[i].classList.add('calendar__arrival')
+        for (let j = 0; j < calendarDays.length; j++) {
+          if ((+calendarDays[j].innerHTML > +roomSearchArrivalButton.innerHTML.slice(0, 2)) && (!calendarDays[j].classList.contains('calendar__disabled')) && (roomSearchArrivalButton.innerHTML.slice(3) == monthAndYear)) {
+            calendarDays[j].classList.add('calendar__dayInRange')
+          }
+        }
+      }
+
+      if (calendarDays[i].classList.contains('calendar__checkout')) {
+        for (let i = 0; i < calendarDays.length; i++) {
+          if ((+calendarDays[i].innerHTML < +roomSearchCheckoutButton.innerHTML.slice(0, 2)) && (!calendarDays[i].classList.contains('calendar__disabled')) && (roomSearchCheckoutButton.innerHTML.slice(3) == monthAndYear)) {
+            calendarDays[i].classList.add('calendar__dayInRange')
+          }
+        }
+      }
+    }
+
+    for (let i = 0; i < calendarDays.length; i++) {
+      if (((+monthAndYear.slice(0, 2) > +roomSearchArrivalButton.innerHTML.slice(3, 5)) && (+monthAndYear.slice(0, 2) < +roomSearchCheckoutButton.innerHTML.slice(3, 5)) && (+monthAndYear.slice(3) == +roomSearchArrivalButton.innerHTML.slice(6)) && (+monthAndYear.slice(3) == +roomSearchCheckoutButton.innerHTML.slice(6))) 
+      && (!calendarDays[i].classList.contains('calendar__disabled'))) {
+        calendarDays[i].classList.add('calendar__dayInRange')
+      }
+
+      if (+roomSearchArrivalButton.innerHTML.slice(6) < +roomSearchCheckoutButton.innerHTML.slice(6)) {
+        if ((((+monthAndYear.slice(3) == +roomSearchArrivalButton.innerHTML.slice(6)) && (+monthAndYear.slice(0, 2) > +roomSearchArrivalButton.innerHTML.slice(3, 5))) 
+        || ((+monthAndYear.slice(3) == +roomSearchCheckoutButton.innerHTML.slice(6)) && (+monthAndYear.slice(0, 2) < +roomSearchCheckoutButton.innerHTML.slice(3, 5))))
+        && (!calendarDays[i].classList.contains('calendar__disabled'))) {
+          calendarDays[i].classList.add('calendar__dayInRange')
+        }
+      }
+
+      if (((+monthAndYear.slice(3) > +roomSearchArrivalButton.innerHTML.slice(6)) && (+monthAndYear.slice(3) < +roomSearchCheckoutButton.innerHTML.slice(6)))
+      && (!calendarDays[i].classList.contains('calendar__disabled'))) {
+        calendarDays[i].classList.add('calendar__dayInRange')
+      }
+    }
+
+    if ((monthAndYear == roomSearchArrivalButton.innerHTML.slice(3)) && (monthAndYear == roomSearchCheckoutButton.innerHTML.slice(3))) {
+      for (let i = 0; i < calendarDays.length; i++) {
+        calendarDays[i].classList.remove('calendar__dayInRange')
+      }
+      
+      for (let i = 0; i < calendarDays.length; i++) {
+        if (((+calendarDays[i].innerHTML > +roomSearchArrivalButton.innerHTML.slice(0, 2)) && (+calendarDays[i].innerHTML < +roomSearchCheckoutButton.innerHTML.slice(0, 2)))
+        && (!calendarDays[i].classList.contains('calendar__disabled'))) {
+          calendarDays[i].classList.add('calendar__dayInRange')
+        }
+      }
+    }
+  }
+
+  // Возвращаем месяц и год для инициализации инпутов
   return monthAndYear 
 }
 

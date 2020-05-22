@@ -184,7 +184,6 @@ let guestsDropdownChildrenWords = ['ребенок','ребенка','детей
 let guestsDropdownBabiesWords = ['младенец','младенца','младенцев']
 
 // Для каждого вида удобства:
-
 for(let i = 0; i < guestsDropdownNum.length; i++) {
 
 // При клике на плюс
@@ -354,22 +353,21 @@ guestsDropdownClearButton.onclick = function() {
 // Кнопка "Применить"
 
 guestsDropdownApplyButton.onclick = function() {
-    for (i = 0; i < facilitiesDropdownMenu.length; i++) {
+    for (let i = 0; i < facilitiesDropdownMenu.length; i++) {
         facilitiesDropdownMenu[i].classList.remove('facilities-dropdown__open-js');
     }
 }
 
 // Делаю дропдауны закрытыми при клике мимо них
 
-for (i = 0; i < facilitiesDropdownMenu.length; i++) {
+for (let i = 0; i < facilitiesDropdownMenu.length; i++) {
     facilitiesDropdownMenu[i].addEventListener('click', e => {
         e.stopPropagation();
     });
 }
 
-
 document.addEventListener('click', e => {
-    for (i = 0; i < facilitiesDropdownMenu.length; i++) {
+    for (let i = 0; i < facilitiesDropdownMenu.length; i++) {
         let target = e.target;
         let itsDropdown = target == facilitiesDropdownMenu[i];
         let dropdownIsOpened = facilitiesDropdownMenu[i].classList.contains('facilities-dropdown__open-js');
@@ -379,5 +377,6 @@ document.addEventListener('click', e => {
             };
     }
 }) 
+
 
 
