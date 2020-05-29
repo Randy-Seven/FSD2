@@ -2,6 +2,7 @@ let roomSearchArrivalButton = document.querySelector('.room-search-form__arrival
 let roomSearchCheckoutButton = document.querySelector('.room-search-form__checkout-button')
 let dropCalendar = document.querySelector('.drop-calendar')
 let calendarApplyButton = document.querySelector('.calendar__apply-js')
+let calendarClearButton = document.querySelector('.calendar__clear-js')
 let dropCalendarTable = document.querySelector('#dropCalendar')
 let selectedArrivalDay;
 let selectedCheckoutDay;
@@ -233,7 +234,22 @@ dropCalendarTable.onmouseover = function(event) { // Функция, подсв�
     }
 }
 
-
+// Кнопка "Очистить" 
+calendarClearButton.onclick = function() {
+    let calendarDays = document.querySelectorAll('#dropCalendar td')
+    selectedArrivalDay = false;
+    selectedCheckoutDay = false;
+    roomSearchArrivalButton.innerHTML = 'ДД.ММ.ГГГГ' 
+    roomSearchCheckoutButton.innerHTML = 'ДД.ММ.ГГГГ'
+    for (let i = 0; i < calendarDays.length; i++) {
+        calendarDays[i].classList.remove('calendar__dayInRange')
+        calendarDays[i].classList.remove('calendar__arrival')
+        calendarDays[i].classList.remove('calendar__arrivalWithoutAfter')
+        calendarDays[i].classList.remove('calendar__checkout')
+        calendarDays[i].classList.remove('calendar__hoverIfOnTheRange')
+        calendarDays[i].classList.remove('calendar__hoverIfSelectedDay')
+    }
+}
 
 // Подсвечивает день прибытия
 function highlightArrivalDay(day) {
