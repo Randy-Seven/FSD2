@@ -99,9 +99,6 @@ if ((window.location.toString().indexOf('landing-page.html') > 0) || (window.loc
     table += '</tr></table>';
 
     // Исправляем конфликты с id
-    if (window.location.toString().indexOf('landing-page.html') <= 0) {
-      calendar.innerHTML = table;
-    }
     
     dropCalendar.innerHTML = table;
 

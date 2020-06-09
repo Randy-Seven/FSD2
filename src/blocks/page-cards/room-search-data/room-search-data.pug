@@ -7,22 +7,19 @@
 			.room-search-form__arrival
 				.text-field__header  <!-- From "text-fields.pug" -->
 					|прибытие
-				button.text-field__input.text-field__input_dropdown 19.08.2019
-					.arrow
-						img(src="/assets/img/down-arrow.svg" width="12", alt="")
+				button.text-field__input.text-field__input_dropdown.room-search-form__arrival-button 19.08.2019
 			.room-search-form__arrival
 				.text-field__header
 					|выезд
-				button.text-field__input.text-field__input_dropdown 23.08.2019
-					.arrow
-						img(src="/assets/img/down-arrow.svg" width="12", alt="")
+				button.text-field__input.text-field__input_dropdown.room-search-form__checkout-button 23.08.2019
+			include ../calendar/expand-calendar.pug
 		.room-search-form__margin    
 			include ../../page-form-elements/active-dropdowns/guests-dropdown.pug
 
 		ul.room-search-data__cost
 			li.room-search-data__cost-count 
-				.room-search-data__first-column 9 990₽ х 4 суток
-				.room-search-data__second-column 39 960₽
+				.room-search-data__first-column.room-search-data__countCostForTotalDays-js 9 990₽ х 4 суток
+				.room-search-data__second-column.room-search-data__costForTotalDays-js 39 960₽
 			li.room-search-data__cost-count
 				.room-search-data__first-column.room-search-data__info-icon Сбор за услуги: скидка 2 179₽
 				.room-search-data__second-column 0₽
@@ -33,7 +30,7 @@
 		.room-search-data__total-cost
 			p Итого
 			.room-search-data__dash
-			p 38 081₽
+			p.room-search-data__countedTotalCost-js 38 081₽
 
 		button.big-buttons__arrow-button забронировать <!-- From "sliders.pug" -->
 			.big-buttons__arrow

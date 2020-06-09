@@ -28,12 +28,14 @@
 .room-details__inner {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .room-details__first-column {
     display: flex;
     flex-wrap: wrap;
-    width: 711px;
+    max-width: 711px;
+    width: 100%;
 }
 
 .room-details__room-information {
@@ -115,7 +117,6 @@
     border-right: solid $border transparent;
     border-radius: 0 60px 0 0;
 
-  
     &::before {
       content: '';
       position: absolute;
@@ -234,6 +235,7 @@
 }
 
 .room-details__feedbacks {
+    width: 100%;
     margin-top: -0.68rem;
     margin-bottom: 1.58rem;
 }
@@ -298,6 +300,7 @@
 
 .room-details__rules {
     display: flex;
+    flex-wrap: wrap;
     margin-bottom: 3.05rem;
 }
 

@@ -51,7 +51,8 @@
 ================================ */
 
 .room-information__feedback {
-    width: 712px;
+    width: 100%;
+    max-width: 712px;
     font-family: 'Montserrat', sans-serif;
     font-size: 0.74rem;
     line-height: 1.26rem;

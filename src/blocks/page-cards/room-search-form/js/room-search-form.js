@@ -63,6 +63,8 @@ if ((window.location.toString().indexOf('landing-page.html') > 0) || (window.loc
             highlightArrivalDay(target)
             roomSearchArrivalButton.style.borderColor = 'rgba(31, 32, 65, 0.25)'
             roomSearchCheckoutButton.style.borderColor = 'rgba(31, 32, 65, 0.5)'
+            roomSearchCheckoutButton.innerHTML = 'ДД.ММ.ГГГГ'
+
 
         } else if (selectedArrivalDay && !selectedCheckoutDay) { // Если выбран день прибытия то выбираем день выезда
 
@@ -147,6 +149,59 @@ if ((window.location.toString().indexOf('landing-page.html') > 0) || (window.loc
             roomSearchCheckoutButton.innerHTML = '0' + selectedCheckoutDay.innerHTML + '.' + monthAndYear
         } else if (selectedCheckoutDay) {
             roomSearchCheckoutButton.innerHTML = selectedCheckoutDay.innerHTML + '.' + monthAndYear
+        }
+
+        // Считаем количество забронированных дней
+        if (window.location.toString().indexOf('room-details-page.html') > 0) { 
+            let totalDays
+            let countCostForTotalDays = document.querySelector('.room-search-data__countCostForTotalDays-js')
+            let costForTotalDays = document.querySelector('.room-search-data__costForTotalDays-js')
+            let countedTotalCost = document.querySelector('.room-search-data__countedTotalCost-js')
+
+            if (roomSearchArrivalButton.innerHTML.slice(3) == roomSearchCheckoutButton.innerHTML.slice(3)) {
+                totalDays = +roomSearchCheckoutButton.innerHTML.slice(0, 2) - +roomSearchArrivalButton.innerHTML.slice(0, 2)
+
+            } else if (roomSearchArrivalButton.innerHTML.slice(6) == roomSearchCheckoutButton.innerHTML.slice(6)) {
+                totalDays = getLastDayOfMonth(roomSearchArrivalButton.innerHTML.slice(6), roomSearchArrivalButton.innerHTML.slice(3, 5)) - roomSearchArrivalButton.innerHTML.slice(0, 2) 
+                + +roomSearchCheckoutButton.innerHTML.slice(0, 2)
+                
+                for (let i = 1; i <= 12; i++) {
+                    if ((i > roomSearchArrivalButton.innerHTML.slice(3, 5)) && (i < roomSearchCheckoutButton.innerHTML.slice(3, 5))) {
+                        totalDays += getLastDayOfMonth(roomSearchArrivalButton.innerHTML.slice(6), i)
+                    }
+                }
+
+            } else if ((roomSearchArrivalButton.innerHTML.slice(6) != roomSearchCheckoutButton.innerHTML.slice(6)) && roomSearchCheckoutButton.innerHTML != 'ДД.ММ.ГГГГ') {
+                totalDays = getLastDayOfMonth(roomSearchArrivalButton.innerHTML.slice(6), roomSearchArrivalButton.innerHTML.slice(3, 5)) - roomSearchArrivalButton.innerHTML.slice(0, 2) 
+                + +roomSearchCheckoutButton.innerHTML.slice(0, 2)
+
+                for (let i = 1; i <= 12; i++) {
+                    if (i > roomSearchArrivalButton.innerHTML.slice(3, 5)) {
+                        totalDays += getLastDayOfMonth(roomSearchArrivalButton.innerHTML.slice(6), i)
+                    }
+                    if (i < roomSearchCheckoutButton.innerHTML.slice(3, 5)) {
+                        totalDays += getLastDayOfMonth(roomSearchCheckoutButton.innerHTML.slice(6), i)
+                    }
+                }
+
+                if (roomSearchCheckoutButton.innerHTML.slice(6) - roomSearchArrivalButton.innerHTML.slice(6) > 1) {
+                    for (let i = +roomSearchArrivalButton.innerHTML.slice(6) + 1; i < roomSearchCheckoutButton.innerHTML.slice(6); i++) {
+                        if (i % 4 == 0) {
+                            totalDays += 366 
+                        } else {
+                            totalDays += 365
+                        }
+                    }
+                }
+            }
+
+            let totalSumDays = 9990 * totalDays
+            let totalSum = totalSumDays - 1879
+
+            countCostForTotalDays.innerHTML = `9 990₽ x ${totalDays} суток`
+            costForTotalDays.innerHTML = `${totalSumDays.toLocaleString()}₽`
+            countedTotalCost.innerHTML = `${totalSum.toLocaleString()}₽`
+
         }
 
         return selectedArrivalDay
@@ -263,4 +318,10 @@ if ((window.location.toString().indexOf('landing-page.html') > 0) || (window.loc
         selectedCheckoutDay = day;
         selectedCheckoutDay.classList.add('calendar__checkout'); 
     }
+}
+
+// Функция, возвращающая последнее число месяца 
+function getLastDayOfMonth(year, month) {
+    let date = new Date(year, month, 0);
+    return date.getDate();
 }
