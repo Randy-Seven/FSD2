@@ -1,16 +1,18 @@
 .log-in
     .log-in__inner
         .log-in__header Войти
+        form(method='post' name='logIn' id='logInForm')
+            .log-in__email-margin
+                input(class="text-field__input" type="email" name="email2" placeholder="Email")
 
-        .log-in__email-margin
-            input(class="text-field__input" type="email" name="email2" placeholder="Email")
-
-        .log-in__password-margin
-            input(class="text-field__input" type="password" placeholder="Пароль")
-        
-        button.big-buttons__arrow-button.register__button-margin войти
-            .big-buttons__arrow
-        
+            .log-in__password-margin
+                input(class="text-field__input" type="password" placeholder="Пароль" name='logInPassword')
+            
+            .register__button-wrapper
+                input(type='button' value='войти' id='logInButton').big-buttons__arrow-button.register__button-margin
+                .big-buttons__arrow
+            
         .register-have-account
             p Нет аккаунта на Toxin?
-            button.big-buttons__sign-up.big-buttons__sign-up_sign-in создать
+            form(action="register-page.html")
+                button.big-buttons__sign-up.big-buttons__sign-up_sign-in создать
