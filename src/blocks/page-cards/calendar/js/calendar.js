@@ -1,4 +1,5 @@
-if ((window.location.toString().indexOf('landing-page.html') > 0) || (window.location.toString().indexOf('room-details-page.html') > 0)) {
+if ((window.location.toString().indexOf('landing-page.html') > 0) 
+|| (window.location.toString().indexOf('room-details-page.html') > 0)) {
   let today = new Date();
 
   let months = [

@@ -8,9 +8,6 @@ if ((window.location.toString().indexOf('landing-page.html') > 0) || (window.loc
     let selectedArrivalDay;
     let selectedCheckoutDay;
 
-    // Изначально календарь спрятан
-    dropCalendar.hidden = true
-
     // Открываем календарь по клику 
     roomSearchArrivalButton.onclick = function() {
         dropCalendar.hidden = false;

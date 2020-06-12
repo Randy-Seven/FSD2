@@ -29,7 +29,6 @@ if (window.location.toString().indexOf('search-room-page.html') > 0) { // Зап
         newLeft = rightEdgeForMin;
       }
 
-      console.log(newLeft)
       rangeSliderMinPrice.innerHTML = (Math.trunc(newLeft / 1.5) * 100).toLocaleString('ru')
 
       if (+rangeSliderMinPrice.innerHTML <= 0) { // Исключаем отрицательные значения
@@ -67,7 +66,6 @@ if (window.location.toString().indexOf('search-room-page.html') > 0) { // Зап
         newLeft = 252;
       }
 
-      console.log(newLeft)
       rangeSliderMaxPrice.innerHTML = (Math.trunc(newLeft / 1.5) * 100 - 1000).toLocaleString('ru')
 
       rangeSliderDiapason.style.right = (rangeSlider.offsetWidth - newLeft - 15) + 'px';
@@ -88,11 +86,3 @@ if (window.location.toString().indexOf('search-room-page.html') > 0) { // Зап
     return false;
   };
 }
-
-/* ЗАПУСКАТЬ ТОЛЬКО НА ОПРЕДЕЛЕННЫХ СТРАНИЦАХ
-
-if (window.location.toString().indexOf('landing-page.html') <= 0) {
-  calendar.innerHTML = table;
-}
-
-*/
