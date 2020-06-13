@@ -67,6 +67,9 @@ if (window.location.toString().indexOf('search-room-page.html') > 0) { // Зап
       }
 
       rangeSliderMaxPrice.innerHTML = (Math.trunc(newLeft / 1.5) * 100 - 1000).toLocaleString('ru')
+      if (rangeSliderMaxPrice.innerHTML < 100) {
+        rangeSliderMaxPrice.innerHTML = 100
+      }
 
       rangeSliderDiapason.style.right = (rangeSlider.offsetWidth - newLeft - 15) + 'px';
     }
